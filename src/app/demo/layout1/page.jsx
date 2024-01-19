@@ -7,9 +7,9 @@ export default function Layout1(){
         <>
             <h1>This is my first experiment</h1>
             <div className={"flex justify-center relative top-0"}>
-                <div className={"bg-amber-500 sm:w-1/2 w-full h-screen absolute top-5 rounded-lg"}>
+                <div className={"bg-amber-500 sm:w-[625px] min-w-[325px] sm:w-1/2 w-10/12 h-screen absolute top-5 rounded-lg"}>
                     <Image
-                        className={"shadow-lg rounded-lg absolute -left-3 -top-3"}
+                        className={"shadow-lg rounded-lg absolute -left-3 -top-3 sm:w-52 sm:h-52 w-28 h-28"}
                         src={"/me.png"}
                         alt={"A picture of myself smiling into the camera"}
                         width={200}
