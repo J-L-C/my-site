@@ -13,4 +13,128 @@ body {
   }
 }
 
+@layer base {
+  h1 {
+    @apply text-3xl;
+  }
+  h2 {
+    @apply text-2xl;
+  }
+  h3 {
+    @apply text-xl;
+  }
+}
 
+.parallax__viewport {
+  height: 100vh;
+
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  perspective: 1px;
+}
+
+.parallax__layer {
+  /*bottom: 0;*/
+  /*height: 100%;*/
+  /*left: 0;*/
+  /*position: absolute;*/
+  /*right: 0;*/
+  /*top: 0;*/
+  /*width: 100%;*/
+}
+
+.layer1 {
+  transform: translateZ(0);
+}
+
+.layer2 {
+  transform: translateZ(-0.5px);
+}
+
+.layer3 {
+  transform: translateZ(-2px);
+}
+
+.layer3 {
+  transform: translateZ(-3px);
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+.spin {
+  animation: spin 20s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+.text-outline {
+    -webkit-text-stroke-width: 1px; /* Width of the outline */
+    -webkit-text-stroke-color: #ff0000; /* Color of the outline */
+}
+
+.text-with-red-shadow {
+  text-shadow:
+          1px 1px 0px #780000,
+          1.25px 1.25px 0px #820101,
+          1.75px 1.75px 0px #8c0202,
+          2px 2px 0px #960202,
+          2.25px 2.25px 0px #a00202,
+          2.5px 2.5px 0px #aa0202,
+          2.75px 2.75px 0px #b40202,
+          3px 3px 0px #be0202,
+          3.25px 3.25px 0px #c80202,
+          3.50px 3.50px 0px #d20202,
+          3.75px 3.75px 0px #dc0202,
+          4px 4px 0px #e60202,
+          4.25px 4.25px 0px #f00202,
+          4.50px 4.50px 0px #fa0202,
+          4.75px 4.75px 0px #ff0202;
+
+}
+
+.text-with-red-shadow-no-gradient {
+  text-shadow:
+          1px 1px 0px #b40202,
+          1.25px 1.25px 0px #b40202,
+          1.75px 1.75px 0px #b40202,
+          2px 2px 0px #b40202,
+          2.25px 2.25px 0px #b40202,
+          2.5px 2.5px 0px #b40202,
+          2.75px 2.75px 0px #b40202,
+          3px 3px 0px #b40202,
+          3.25px 3.25px 0px #b40202,
+          3.50px 3.50px 0px #b40202,
+          3.75px 3.75px 0px #b40202,
+          4px 4px 0px #b40202,
+          4.25px 4.25px 0px #b40202,
+          4.50px 4.50px 0px #b40202,
+          4.75px 4.75px 0px #b40202;
+
+}
+
+.text-with-black-shadow {
+  text-shadow:
+          1px 1px 0px #000000,
+          1.25px 1.25px 0px #000000,
+          1.75px 1.75px 0px #000000,
+          2px 2px 0px #000000,
+          2.25px 2.25px 0px #000000,
+          2.5px 2.5px 0px #000000,
+          2.75px 2.75px 0px #000000;
+
+}
+
+.background{
+  background-color: rgba(255, 255, 255, 0);
+  background-image: url("/texture.svg"), linear-gradient(to right, rgb(48, 84, 206) 0%, rgba(255, 254, 255, 0) 15%, rgba(180, 178, 225, 0) 85%, rgb(32, 75, 218) 100%);
+
+}
