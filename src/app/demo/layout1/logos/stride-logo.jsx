@@ -1,8 +1,8 @@
-export default function StrideLogo({ width = 200, height = 200, className}){
+export default function StrideLogo({ id = "strideLogo",width = 200, height = 200, className}){
     return (
         <>
             <svg
-                id="strideLogo"
+                id={id}
                 width={width}
                  height={height}
                  className={className}

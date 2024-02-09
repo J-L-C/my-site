@@ -1,14 +1,13 @@
-
-export default function CognizantLogo({width, height, className}){
+export default function CognizantLogo({id = "cognizantLogo",width, height, className}) {
 
     const defaultStyle = `
         .st2{fill:#000048}
     `;
 
-    return(
+    return (
         <>
-            <svg version="1.1"
-                 id="Layer_1"
+            <svg id={id}
+                 version="1.1"
                  width={width}
                  height={height}
                  className={className}
@@ -131,7 +130,7 @@ export default function CognizantLogo({width, height, className}){
                                       from="500 0"
                                       to="0 0"
                                       dur="1s"
-                                      />
+                    />
                 </g>
 
             </svg>

@@ -1,8 +1,9 @@
-export default function SabreLogo({width, height, className}) {
+export default function SabreLogo({id = "sabreLogo",width, height, className}) {
 
     return (
         <>
             <svg
+                id={id}
                 xmlns="http://www.w3.org/2000/svg"
                 version="1.1"
                 width={width}
@@ -10,7 +11,7 @@ export default function SabreLogo({width, height, className}) {
                 className={className}
                 transform="scale(.68,.68) translate(-65, -10)"
                 viewBox="-0.68554143 -0.68554143 95.51583586 24.22246386"
-                id="svg4660">
+            >
                 <defs id="defs4662"/>
                 <path
                     fill="url(#color-wave)"

@@ -1,10 +1,10 @@
-export default function JpmcLogo({width = 200, height = 200, className}) {
+export default function JpmcLogo({id = "jpmcLogo",width = 200, height = 200, className}) {
 
     return (
         <>
             <svg
+                id={id}
                 version="1.1"
-                id="svg2"
                 width={width}
                 height={height}
                 className={className}

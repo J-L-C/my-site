@@ -1,8 +1,8 @@
-export default function SantanderUsaLogo({width, height, className}) {
+export default function SantanderUsaLogo({id = "santanderLogo",width, height, className}) {
 
     return (
         <>
-            <svg id="Santander"
+            <svg id={id}
                  width={width}
                  height={height}
                  className={className}

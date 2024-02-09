@@ -1,8 +1,8 @@
-export default function ImprovingLogo({width = 200, height = 200, className}) {
+export default function ImprovingLogo({id = "improvingLogo",width = 200, height = 200, className}) {
 
     return (
         <>
-            <svg id="Layer_1"
+            <svg id={id}
                  width={width}
                  height={height}
                  className={className}

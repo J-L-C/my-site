@@ -121,6 +121,76 @@ body {
 
 }
 
+.text-with-red-shadow-no-gradient-very-long {
+    text-shadow:
+            1px 1px 10px #b40202,
+            1.25px 1.25px 0px #b40202,
+            1.75px 1.75px 0px #b40202,
+            2px 2px 0px #b40202,
+            2.25px 2.25px 0px #b40202,
+            2.5px 2.5px 0px #b40202,
+            2.75px 2.75px 0px #b40202,
+            3px 3px 0px #b40202,
+            3.25px 3.25px 0px #b40202,
+            3.50px 3.50px 0px #b40202,
+            3.75px 3.75px 0px #b40202,
+            4px 4px 10px #b40202,
+            4.25px 4.25px 0px #b40202,
+            4.50px 4.50px 0px #b40202,
+            4.75px 4.75px 0px #b40202,
+            5px 5px 0px #b40202,
+            5.25px 5.25px 0px #b40202,
+            5.50px 5.50px 0px #b40202,
+            5.75px 5.75px 0px #b40202,
+            6px 6px 0px #b40202,
+            6.25px 6.25px 0px #b40202,
+            6.50px 6.50px 0px #b40202,
+            6.75px 6.75px 0px #b40202,
+            7px 7px 10px #b40202,
+            7.25px 7.25px 0px #b40202,
+            7.50px 7.50px 0px #b40202,
+            7.75px 7.75px 0px #b40202,
+            8px 8px 0px #b40202,
+            8.25px 8.25px 0px #b40202,
+            8.50px 8.50px 0px #b40202,
+            8.75px 8.75px 0px #b40202,
+            9px 9px 0px #b40202,
+            9.25px 9.25px 0px #b40202,
+            9.50px 9.50px 0px #b40202,
+            9.75px 9.75px 0px #b40202,
+            10px 10px 0px #b40202,
+            10.25px 10.25px 0px #b40202,
+            10.50px 10.50px 0px #b40202,
+            10.75px 10.75px 0px #b40202,
+            11px 11px 10px #b40202,
+            11.25px 11.25px 0px #b40202,
+            11.50px 11.50px 0px #b40202,
+            11.75px 11.75px 0px #b40202,
+            12px 12px 0px #b40202,
+            12.25px 12.25px 0px #b40202,
+            12.50px 12.50px 0px #b40202,
+            12.75px 12.75px 0px #b40202,
+            13px 13px 0px #b40202,
+            13.25px 13.25px 0px #b40202,
+            13.50px 13.50px 0px #b40202,
+            13.75px 13.75px 0px #b40202,
+            14px 14px 0px #b40202,
+            14.25px 14.25px 0px #b40202,
+            14.50px 14.50px 0px #b40202,
+            14.75px 14.75px 0px #b40202,
+            15px 15px 0px #b40202,
+            15.25px 15.25px 0px #b40202,
+            15.50px 15.50px 0px #b40202,
+            15.75px 15.75px 0px #b40202,
+            16px 16px 0px #b40202,
+            16.25px 16.25px 0px #b40202,
+            16.50px 16.50px 0px #b40202,
+            16.75px 16.75px 0px #b40202,
+            17px 17px 10px #b40202,
+            17.25px 17.25px 10px #b40202;
+
+}
+
 .text-with-black-shadow {
   text-shadow:
           1px 1px 0px #000000,
@@ -130,6 +200,15 @@ body {
           2.25px 2.25px 0px #000000,
           2.5px 2.5px 0px #000000,
           2.75px 2.75px 0px #000000;
+
+}
+
+.text-with-grey-shadow {
+    text-shadow:
+            1px 1px 0px rgba(176, 176, 176, 0.5),
+            1.25px 1.25px 0px rgba(176, 176, 176, 0.5),
+            1.75px 1.75px 0px rgba(176, 176, 176, 0.5),
+            2px 2px 0px rgba(176, 176, 176, 0.5);
 
 }
 

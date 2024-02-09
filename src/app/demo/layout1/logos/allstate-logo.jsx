@@ -1,8 +1,9 @@
-export default function AllstateLogo({width, height, className}) {
+export default function AllstateLogo({id = "allstateLogo",width, height, className}) {
 
     return (
         <>
-            <svg xmlns="http://www.w3.org/2000/svg"
+            <svg id={id}
+                 xmlns="http://www.w3.org/2000/svg"
                  width={width}
                  height={height}
                  className={className}

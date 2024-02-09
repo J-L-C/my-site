@@ -1,8 +1,9 @@
-export default function AALogo({width, height, className}){
+export default function AALogo({id = "aaLogo",width, height, className}){
 
     return(
         <>
-            <svg clipRule="evenodd"
+            <svg id={id}
+                 clipRule="evenodd"
                  fillRule="evenodd"
                  width={width}
                  height={height}
