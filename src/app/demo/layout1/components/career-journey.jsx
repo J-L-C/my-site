@@ -17,7 +17,7 @@ export default function CareerJourney({className}) {
                                 text-7xl
                                 "
             >Career Journey</h1>
-            <div className="">
+            <div>
 
                 <StrideSection/>
 

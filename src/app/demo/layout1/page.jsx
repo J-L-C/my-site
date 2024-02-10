@@ -33,8 +33,10 @@ export default function Layout1() {
         const animateTransformElements = element.querySelectorAll("animateTransform");
 
         animateElements.forEach((element) => {
+            // const time = element.getAttribute("begin").split(";")[0]
+
             const offset = element.getAttribute("begin") === null ? 0 :
-                element.getAttribute("begin").replaceAll("s","");
+                element.getAttribute("begin").split(";")[0].replaceAll("s","");
 
             element.beginElementAt(Number(offset))
         });

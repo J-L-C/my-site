@@ -18,6 +18,7 @@ export default function AaSection({className}) {
         });
 
     }
+
     return (<>
         <div className="">
             <div className="mb-8 sm:mx-[23%] mx-[35%]">
