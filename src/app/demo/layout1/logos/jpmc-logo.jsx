@@ -9,6 +9,7 @@ export default function JpmcLogo({id = "jpmcLogo",width = 200, height = 200, cla
                 height={height}
                 onClick={click}
                 className={className}
+                opacity="0"
                 transform="scale(1.35,1.35)"
                 viewBox="0 0 1000 80"
                 xmlns="http://www.w3.org/2000/svg"

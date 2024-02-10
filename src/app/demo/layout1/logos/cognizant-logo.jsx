@@ -12,6 +12,7 @@ export default function CognizantLogo({id = "cognizantLogo",width, height, class
                  height={height}
                  onClick={onClick}
                  className={className}
+                 opacity="0"
                  transform="scale(1.25) translate(30,30)"
                  xmlns="http://www.w3.org/2000/svg"
             >

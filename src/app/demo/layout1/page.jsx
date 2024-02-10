@@ -5,6 +5,7 @@ import HeroSection from "@/app/demo/layout1/components/hero-section";
 import ProfileSection from "@/app/demo/layout1/components/profile-section";
 import CareerJourney from "@/app/demo/layout1/components/career-journey";
 import {useEffect} from "react";
+import {convertTimeToNumber} from "@/app/demo/layout1/utils/convert";
 
 export default function Layout1() {
 
@@ -26,89 +27,96 @@ export default function Layout1() {
     let sabreLogoTriggered = false;
     let santanderLogoTriggered = false;
 
-
-    const triggerAnimation = (element)=>{
+    const triggerAnimation = (element) => {
 
         const animateElements = element.querySelectorAll("animate");
         const animateTransformElements = element.querySelectorAll("animateTransform");
 
         animateElements.forEach((element) => {
-            // const time = element.getAttribute("begin").split(";")[0]
-
-            const offset = element.getAttribute("begin") === null ? 0 :
-                element.getAttribute("begin").split(";")[0].replaceAll("s","");
+            const begin = element.getAttribute("begin")
+            const offset = begin === null ? 0 : convertTimeToNumber(begin);
 
             element.beginElementAt(Number(offset))
         });
 
-        animateTransformElements.forEach((element) =>{
-            const offset = element.getAttribute("begin") === null ? 0 :
-                element.getAttribute("begin").replaceAll("s","");
+        animateTransformElements.forEach((element) => {
+            const begin = element.getAttribute("begin")
+            const offset = begin === null ? 0 : convertTimeToNumber(begin);
 
             element.beginElementAt(Number(offset))
         })
 
     }
 
+    const removeScrollEvent = () => {
+        if (strideLogoTriggered,
+            improvingLogoTriggered,
+            jpmcLogoTriggered,
+            aaLogoTriggered,
+            cognizantLogoTriggered,
+            allstateLogoTriggered,
+            sabreLogoTriggered,
+            santanderLogoTriggered) {
+
+            console.log('scroll event removed')
+            window.removeEventListener("scroll", triggerAnimationInView)
+        }
+    }
+
+    const triggerAnimationInView = () => {
+        if (isInViewport(strideLogo) && !strideLogoTriggered) {
+            // triggerAnimation(strideLogo)
+            strideLogoTriggered = true;
+        }
+        if (isInViewport(improvingLogo) && !improvingLogoTriggered) {
+            triggerAnimation(improvingLogo)
+            improvingLogo.setAttribute("opacity", 1)
+            improvingLogoTriggered = true;
+        }
+        if (isInViewport(jpmcLogo) && !jpmcLogoTriggered) {
+            triggerAnimation(jpmcLogo)
+            jpmcLogo.setAttribute("opacity", 1)
+            jpmcLogoTriggered = true;
+        }
+        if (isInViewport(aaLogo) && !aaLogoTriggered) {
+            triggerAnimation(aaLogo)
+            aaLogoTriggered = true;
+        }
+        if (isInViewport(cognizantLogo) && !cognizantLogoTriggered) {
+            triggerAnimation(cognizantLogo)
+            cognizantLogo.setAttribute("opacity", 1)
+            cognizantLogoTriggered = true;
+        }
+        if (isInViewport(allstateLogo) && !allstateLogoTriggered) {
+            triggerAnimation(allstateLogo)
+            allstateLogo.setAttribute("opacity", 1)
+            allstateLogoTriggered = true;
+        }
+        if (isInViewport(sabreLogo) && !sabreLogoTriggered) {
+            triggerAnimation(sabreLogo)
+            sabreLogoTriggered = true;
+        }
+        if (isInViewport(santanderLogo) && !santanderLogoTriggered) {
+            triggerAnimation(santanderLogo)
+            santanderLogo.setAttribute("opacity", 1)
+            santanderLogoTriggered = true;
+        }
+
+        removeScrollEvent()
+    }
 
     useEffect(() => {
-        console.log(window.innerHeight)
 
-         strideLogo = document.getElementById("strideLogo");
-         improvingLogo = document.getElementById("improvingLogo");
-         jpmcLogo = document.getElementById("jpmcLogo");
-         aaLogo = document.getElementById("aaLogo");
-         cognizantLogo = document.getElementById("cognizantLogo");
-         allstateLogo = document.getElementById("allstateLogo");
-         sabreLogo = document.getElementById("sabreLogo");
-         santanderLogo = document.getElementById("santanderLogo");
+        strideLogo = document.getElementById("strideLogo");
+        improvingLogo = document.getElementById("improvingLogo");
+        jpmcLogo = document.getElementById("jpmcLogo");
+        aaLogo = document.getElementById("aaLogo");
+        cognizantLogo = document.getElementById("cognizantLogo");
+        allstateLogo = document.getElementById("allstateLogo");
+        sabreLogo = document.getElementById("sabreLogo");
+        santanderLogo = document.getElementById("santanderLogo");
 
-        window.addEventListener("scroll",(event)=>{
-
-            if(isInViewport(strideLogo) && !strideLogoTriggered){
-                triggerAnimation(strideLogo)
-                strideLogoTriggered = true;
-            }
-            if(isInViewport(improvingLogo) && !improvingLogoTriggered){
-                triggerAnimation(improvingLogo)
-                improvingLogoTriggered = true;
-            }
-            if(isInViewport(jpmcLogo) && !jpmcLogoTriggered){
-                triggerAnimation(jpmcLogo)
-                jpmcLogoTriggered = true;
-            }
-            if(isInViewport(aaLogo) && !aaLogoTriggered){
-                triggerAnimation(aaLogo)
-                aaLogoTriggered = true;
-            }
-            if(isInViewport(cognizantLogo) && !cognizantLogoTriggered){
-                triggerAnimation(cognizantLogo)
-                cognizantLogoTriggered = true;
-            }
-            if(isInViewport(allstateLogo) && !allstateLogoTriggered){
-                triggerAnimation(allstateLogo)
-                allstateLogoTriggered = true;
-            }
-            if(isInViewport(sabreLogo) && !sabreLogoTriggered){
-                triggerAnimation(sabreLogo)
-                sabreLogoTriggered = true;
-            }
-            if(isInViewport(santanderLogo) && !santanderLogoTriggered){
-                triggerAnimation(santanderLogo)
-                santanderLogoTriggered = true;
-            }
-
-            // console.log("strideLogo is in viewport " +isInViewport(strideLogo))
-            // console.log("improvingLogo is in viewport " +isInViewport(improvingLogo))
-            // console.log("jpmcLogo is in viewport " +isInViewport(jpmcLogo))
-            // console.log("aaLogo is in viewport " +isInViewport(aaLogo))
-            // console.log("cognizantLogo is in viewport " +isInViewport(cognizantLogo))
-            // console.log("allstateLogo is in viewport " +isInViewport(allstateLogo))
-            // console.log("sabreLogo is in viewport " +isInViewport(sabreLogo))
-            // console.log("santanderLogo is in viewport " +isInViewport(santanderLogo))
-
-            // console.log(document.documentElement.scrollHeight)
-        }, true)
+        window.addEventListener("scroll", triggerAnimationInView, true)
 
     }, []);
 
@@ -122,7 +130,6 @@ export default function Layout1() {
             rect.right <= (window.innerWidth || document.documentElement.clientWidth)
         );
     }
-
 
 
     return (
@@ -148,7 +155,7 @@ export default function Layout1() {
 
                     <ProfileSection/>
 
-                    <HeroSection />
+                    <HeroSection/>
 
                     {/*career journey*/}
                     <CareerJourney/>

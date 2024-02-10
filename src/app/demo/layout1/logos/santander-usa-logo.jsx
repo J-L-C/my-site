@@ -7,6 +7,7 @@ export default function SantanderUsaLogo({id = "santanderLogo",width, height, cl
                  height={height}
                  className={className}
                  onClick={onClick}
+                 opacity="0"
                  transform="scale(1.40,1.40) translate(0, 0)"
                  xmlns="http://www.w3.org/2000/svg"
                  viewBox="0 0 1900.88 142.95"
