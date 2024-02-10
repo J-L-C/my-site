@@ -25,6 +25,11 @@ body {
   }
 }
 
+p {
+    padding: 2rem;
+    text-align: justify-all;
+}
+
 .parallax__viewport {
   height: 100vh;
 
@@ -123,7 +128,7 @@ body {
 
 .text-with-red-shadow-no-gradient-very-long {
     text-shadow:
-            1px 1px 10px #b40202,
+            1px 1px 0px #b40202,
             1.25px 1.25px 0px #b40202,
             1.75px 1.75px 0px #b40202,
             2px 2px 0px #b40202,
@@ -134,7 +139,7 @@ body {
             3.25px 3.25px 0px #b40202,
             3.50px 3.50px 0px #b40202,
             3.75px 3.75px 0px #b40202,
-            4px 4px 10px #b40202,
+            4px 4px 0px #b40202,
             4.25px 4.25px 0px #b40202,
             4.50px 4.50px 0px #b40202,
             4.75px 4.75px 0px #b40202,
@@ -146,7 +151,7 @@ body {
             6.25px 6.25px 0px #b40202,
             6.50px 6.50px 0px #b40202,
             6.75px 6.75px 0px #b40202,
-            7px 7px 10px #b40202,
+            7px 7px 0px #b40202,
             7.25px 7.25px 0px #b40202,
             7.50px 7.50px 0px #b40202,
             7.75px 7.75px 0px #b40202,
@@ -162,7 +167,7 @@ body {
             10.25px 10.25px 0px #b40202,
             10.50px 10.50px 0px #b40202,
             10.75px 10.75px 0px #b40202,
-            11px 11px 10px #b40202,
+            11px 11px 0px #b40202,
             11.25px 11.25px 0px #b40202,
             11.50px 11.50px 0px #b40202,
             11.75px 11.75px 0px #b40202,
@@ -186,8 +191,8 @@ body {
             16.25px 16.25px 0px #b40202,
             16.50px 16.50px 0px #b40202,
             16.75px 16.75px 0px #b40202,
-            17px 17px 10px #b40202,
-            17.25px 17.25px 10px #b40202;
+            17px 17px 0px #b40202,
+            17.25px 17.25px 0px #b40202;
 
 }
 

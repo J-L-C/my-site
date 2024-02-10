@@ -1,17 +1,41 @@
+"use client"
 import ImprovingLogo from "@/app/demo/layout1/logos/improving-logo";
+import {useEffect} from "react";
 
 export default function ImprovingSection({className}) {
 
+    let improvingLogo;
+    let animateElements;
+
+    useEffect(()=>{
+        improvingLogo = document.getElementById("improvingLogo")
+        animateElements = improvingLogo.querySelectorAll("animate");
+    },[])
+
+    const onClick = ()=>{
+
+        animateElements.forEach((element) => {
+
+            const offset = element.getAttribute("begin") === null ? 0 :
+                element.getAttribute("begin").replaceAll("s","");
+
+            element.beginElementAt(Number(offset))
+
+        });
+
+    }
+
     return (<>
         <div className="mt-16">
-            <div className="w-48 mx-[-3%] my-[-3%]">
+            <div className="w-64 mx-[23%]">
                 <ImprovingLogo
+                    click={onClick}
                     className="mb-12"
-                    width="300"
-                    height="100"
+                    width="400"
+                    height="150"
                 />
             </div>
-            <div className="border-4 rounded">
+            <div className="text-white p-8 text-justify bg-red-600">
                 <p>
                     Client: ‘Publishing & Education Company’ - Delivered new features for their testing
                     center application, worked to reduce technical debt through upgrades and refactoring in

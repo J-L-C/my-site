@@ -1,16 +1,41 @@
+"use client"
 import SabreLogo from "@/app/demo/layout1/logos/sabre-logo";
+import {useEffect} from "react";
 
 export default function SabreSection({className}) {
 
+    let sabreLogo;
+    let animateElements;
+
+    useEffect(()=>{
+        sabreLogo = document.getElementById("sabreLogo")
+        animateElements = sabreLogo.querySelectorAll("animate");
+    },[])
+
+    const onClick = ()=>{
+
+        animateElements.forEach((element) => {
+
+            const offset = element.getAttribute("begin") === null ? 0 :
+                element.getAttribute("begin").replaceAll("s","");
+
+            element.beginElementAt(Number(offset))
+
+        });
+
+    }
+
     return (<>
         <div className="mt-16">
-            <div className="w-48 mx-[-3%] my-[-3%] mr-2">
+            <div className="sm:mx-[23%] mx-[35%]">
                 <SabreLogo
-                    width="300"
-                    height="100"
+                    onClick={onClick}
+                    className="sm:w-96 w-32 stride mt-4"
+                    width="400"
+                    height="150"
                 />
             </div>
-            <div className="border-4 rounded">
+            <div className="text-white bg-fuchsia-600">
                 <p>
                     Collaborated with onsite and overseas-based data migration teams to create
                     scripts

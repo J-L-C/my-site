@@ -1,4 +1,4 @@
-export default function SabreLogo({id = "sabreLogo",width, height, className}) {
+export default function SabreLogo({id = "sabreLogo",width, height, className, onClick}) {
 
     return (
         <>
@@ -9,6 +9,7 @@ export default function SabreLogo({id = "sabreLogo",width, height, className}) {
                 width={width}
                 height={height}
                 className={className}
+                onClick={onClick}
                 transform="scale(.68,.68) translate(-65, -10)"
                 viewBox="-0.68554143 -0.68554143 95.51583586 24.22246386"
             >

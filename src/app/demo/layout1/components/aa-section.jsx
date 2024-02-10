@@ -1,17 +1,34 @@
+"use client"
 import AALogo from "@/app/demo/layout1/logos/aa-logo";
+import {useEffect} from "react";
 
 export default function AaSection({className}) {
 
+    let aaLogo;
+    let animateElements;
+
+    useEffect(()=>{
+        aaLogo = document.getElementById("aaLogo")
+        animateElements = aaLogo.querySelectorAll("animate");
+    },[])
+
+    const onClick = ()=>{
+        animateElements.forEach((element) => {
+            element.beginElement()
+        });
+
+    }
     return (<>
-        <div className="mt-16 mb-36">
-            <div className="w-48 mx-[-3%] my-[-3%]">
+        <div className="">
+            <div className="mb-8 sm:mx-[23%] mx-[35%]">
                 <AALogo
-                    className="mb-16 ml-4"
-                    width="300"
-                    height="100"
+                    onClick={onClick}
+                    className="sm:w-96 w-32 stride mt-4"
+                    width="400"
+                    height="150"
                 />
             </div>
-            <div className="border-4 rounded">
+            <div className="text-white bg-indigo-600">
                 <p>
                     Worked on transforming AA.com legacy monolith into a micro services: using TDD
                     principles and practices in a Paired Programming environment

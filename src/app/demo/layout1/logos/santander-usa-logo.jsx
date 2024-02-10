@@ -1,4 +1,4 @@
-export default function SantanderUsaLogo({id = "santanderLogo",width, height, className}) {
+export default function SantanderUsaLogo({id = "santanderLogo",width, height, className, onClick}) {
 
     return (
         <>
@@ -6,6 +6,7 @@ export default function SantanderUsaLogo({id = "santanderLogo",width, height, cl
                  width={width}
                  height={height}
                  className={className}
+                 onClick={onClick}
                  transform="scale(1.40,1.40) translate(0, 0)"
                  xmlns="http://www.w3.org/2000/svg"
                  viewBox="0 0 1900.88 142.95"

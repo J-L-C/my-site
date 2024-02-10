@@ -1,4 +1,4 @@
-export default function AALogo({id = "aaLogo",width, height, className}){
+export default function AALogo({id = "aaLogo",width, height, className, onClick}){
 
     return(
         <>
@@ -8,6 +8,7 @@ export default function AALogo({id = "aaLogo",width, height, className}){
                  width={width}
                  height={height}
                  className={className}
+                 onClick={onClick}
                  transform="scale(2,2)"
                  viewBox="0 0 560 300"
                  xmlns="http://www.w3.org/2000/svg">
@@ -83,10 +84,6 @@ export default function AALogo({id = "aaLogo",width, height, className}){
                                  fill="freeze"/>
                     </path>
                 </g>
-                <defs>
-                    <animate attributeName="stroke-opacity" values="0;1" dur="5s"/>
-                    <animate id="fade-in" attributeName="stroke-dashoffset" from="1000" to="0" dur="2s" fill="freeze"/>
-                </defs>
             </svg>
         </>
     )

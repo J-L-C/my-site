@@ -12,11 +12,12 @@ export default function CareerJourney({className}) {
     return(<>
         <div className="flex flex-col">
             <h1 className="flex justify-center items-center flex-initial
-                                h-28 text-white bg-[#ff0000] mx-[-3%] gap-8
-                                my-[5%] text-with-red-shadow-no-gradient font-bold rounded
+                                h-20 text-white bg-[#ff0000] mx-[-2%] pt-2
+                                my-[3%] text-with-red-shadow-no-gradient-very-long font-bold rounded
+                                text-7xl
                                 "
             >Career Journey</h1>
-            <div>
+            <div className="">
 
                 <StrideSection/>
 

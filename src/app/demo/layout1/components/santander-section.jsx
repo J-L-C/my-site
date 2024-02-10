@@ -1,17 +1,36 @@
+"use client"
 import SantanderUsaLogo from "@/app/demo/layout1/logos/santander-usa-logo";
+import {useEffect} from "react";
 
 export default function SantanderSection({className}) {
 
+    let santanderLogo;
+    let animateElements;
+
+    useEffect(()=>{
+        santanderLogo = document.getElementById("santanderLogo")
+        animateElements = santanderLogo.querySelectorAll("animateTransform");
+    },[])
+
+    const onClick = ()=>{
+
+        animateElements.forEach((element) => {
+            element.beginElement()
+        });
+
+    }
+
     return (<>
-        <div className="mt-16 mb-36">
-            <div className="w-48 mx-[-3%] my-[-3%] mr-2">
+        <div>
+            <div className="sm:mx-[15%] mx-[33%]">
                 <SantanderUsaLogo
-                    className="ml-8"
-                    width="300"
-                    height="100"
+                    onClick={onClick}
+                    className="sm:w-96 w-32 stride mt-4"
+                    width="400"
+                    height="150"
                 />
             </div>
-            <div className="border-4 rounded">
+            <div className="text-white bg-green-600">
                 <p>
                     I worked closely with the Product Owner and Project Manager to create user
                     stories,

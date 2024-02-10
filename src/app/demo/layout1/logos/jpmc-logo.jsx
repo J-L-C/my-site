@@ -1,4 +1,4 @@
-export default function JpmcLogo({id = "jpmcLogo",width = 200, height = 200, className}) {
+export default function JpmcLogo({id = "jpmcLogo",width = 200, height = 200, className, click}) {
 
     return (
         <>
@@ -7,6 +7,7 @@ export default function JpmcLogo({id = "jpmcLogo",width = 200, height = 200, cla
                 version="1.1"
                 width={width}
                 height={height}
+                onClick={click}
                 className={className}
                 transform="scale(1.35,1.35)"
                 viewBox="0 0 1000 80"

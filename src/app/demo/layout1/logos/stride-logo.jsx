@@ -1,14 +1,17 @@
-export default function StrideLogo({ id = "strideLogo",width = 200, height = 200, className}){
+import React from 'react';
+
+export default function StrideLogo({ id = "strideLogo",width = 200, height = 200, className, click}){
     return (
         <>
             <svg
+                onClick={click}
                 id={id}
                 width={width}
                  height={height}
                  className={className}
                  viewBox="0 0 500 161"
                  fill="none"
-                 transform="scale(.75,.75) translate(-65, -10)"
+                 transform="scale(.75,.75)"
                  xmlns="http://www.w3.org/2000/svg">
                 <path
                     d="M80.0177 13.9547L13.7342 80.245C-4.57808 61.9394 -4.57808 32.267 13.7342 13.9547C32.0466 -4.35762 61.7122 -4.35762 80.0245 13.9547"
@@ -27,25 +30,25 @@ export default function StrideLogo({ id = "strideLogo",width = 200, height = 200
                     <linearGradient
                         id="wave-name">
                         <stop offset="1" stopColor="#1E483E">
-                            <animate attributeName="offset" values="-.20;.95" dur="1s" begin=".75s"/>
+                            <animate attributeName="offset" values="-.20;.95" dur="1s" begin=".75s" restart="whenNotActive"/>
                         </stop>
                         <stop offset="0" stopColor="white">
-                            <animate attributeName="offset" values="0;1" dur="1s" begin=".75s"/>
+                            <animate attributeName="offset" values="0;1" dur="1s" begin=".75s" restart="whenNotActive"/>
                         </stop>
                         <stop offset="0" stopColor="#1E483E">
-                            <animate attributeName="offset" values=".20;1.05" dur="1s" begin=".75s"/>
+                            <animate attributeName="offset" values=".20;1.05" dur="1s" begin=".75s" restart="whenNotActive"/>
                         </stop>
                     </linearGradient>
                     <linearGradient
                         id="wave-symbol">
                         <stop offset="1" stopColor="#1E483E">
-                            <animate id="wave-symbol-animate" attributeName="offset" values="-.20;.95" dur="0.5s"/>
+                            <animate attributeName="offset" values="-.20;.95" dur="0.5s" restart="whenNotActive"/>
                         </stop>
                         <stop offset="0" stopColor="white">
-                            <animate attributeName="offset" values="0;1" dur="0.5s"/>
+                            <animate attributeName="offset" values="0;1" dur="0.5s" restart="whenNotActive"/>
                         </stop>
                         <stop offset="0" stopColor="#1E483E">
-                            <animate attributeName="offset" values=".20;1.05" dur="0.5s"/>
+                            <animate attributeName="offset" values=".20;1.05" dur="0.5s" restart="whenNotActive"/>
                         </stop>
                     </linearGradient>
                 </defs>
