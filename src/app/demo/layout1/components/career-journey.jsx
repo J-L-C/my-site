@@ -10,7 +10,7 @@ import AaSection from "@/app/demo/layout1/components/aa-section";
 export default function CareerJourney({className}) {
 
     return(<>
-        <div className="flex flex-col">
+        <div className={className}>
             <h1 className="flex justify-center items-center flex-initial
                                 h-20 text-white bg-[#ff0000] mx-[-2%] pt-2
                                 my-[3%] text-with-red-shadow-no-gradient-very-long font-bold rounded

@@ -7,6 +7,8 @@ import CareerJourney from "@/app/demo/layout1/components/career-journey";
 import {useEffect} from "react";
 import {convertTimeToNumber} from "@/app/demo/layout1/utils/convert";
 import BlockWithStripes from "@/app/demo/layout1/shapes/block-with-stripes";
+import YoutubeLink from "@/app/demo/layout1/components/links/youtube-link";
+import GithubLink from "@/app/demo/layout1/components/links/github-link";
 
 export default function Layout1() {
 
@@ -28,7 +30,7 @@ export default function Layout1() {
     let allstateLogoTriggered = false;
     let sabreLogoTriggered = false;
     let santanderLogoTriggered = false;
-    let colorWheel = ["blue","red","pink","blue","black"]
+    let colorWheel = ["blue", "red", "pink", "blue", "black"]
 
     const triggerAnimation = (element) => {
 
@@ -246,23 +248,23 @@ export default function Layout1() {
                                               className={"fixed  large right-[1235px] -top-[3900px] rotate-[190deg]"}/>
                         </div>
                         <div className="float">
-                            <BlockWithStripes fill="purple"
+                            <BlockWithStripes fill="blue"
                                               className={"fixed  huge right-[710px] -top-[2900px] -rotate-[142deg]"}/>
                         </div>
                         <div className="float">
-                            <BlockWithStripes fill="purple"
+                            <BlockWithStripes fill="blue"
                                               className={"fixed  large right-[1060px] -top-[2900px] -rotate-[119deg]"}/>
                         </div>
                         <div className="float">
-                            <BlockWithStripes fill="purple"
+                            <BlockWithStripes fill="blue"
                                               className={"fixed large -right-[460px] -top-[3000px] -rotate-[162deg]"}/>
                         </div>
                         <div className="float">
-                            <BlockWithStripes fill="purple"
+                            <BlockWithStripes fill="blue"
                                               className={"fixed  small right-[1760px] -top-[2600px] -rotate-[162deg]"}/>
                         </div>
                         <div className="float">
-                            <BlockWithStripes fill="purple"
+                            <BlockWithStripes fill="blue"
                                               className={"fixed  x2-large right-[1560px] -top-[2200px] -rotate-[142deg]"}/>
                         </div>
                         <div className="float">
@@ -298,7 +300,7 @@ export default function Layout1() {
                                               className={"fixed  large right-[1567px] -top-[90px] -rotate-[49deg]"}/>
                         </div>
                         <div className="float">
-                            <BlockWithStripes fill="black"
+                            <BlockWithStripes fill="blue"
                                               className={"fixed  large -right-[546px] -top-[1800px] rotate-[111deg]"}/>
                         </div>
 
@@ -306,13 +308,20 @@ export default function Layout1() {
 
                 </div>
             </div>
+
+            {/*to solve the issue of my layers uncentering, I can hack together a solution to just move the whole layer*/}
+            {/*at breakpoints. Not the best but hey it should work*/}
+            {/*I might be able to calculate the top position of the layer and then adjust accordingly with javascript*/}
+
+            {/*another thought, how about whenever the screen is expanded or adjusted, there is an animation added that translates */}
+            {/*each block back to where it should be lol*/}
             <div className={"w-0 h-0 layer2"}>
                 <div className={""}>
 
                     <div className="">
 
                         <div className="float">
-                        <BlockWithStripes fill="red"
+                            <BlockWithStripes fill="red"
                                               className={"fixed x-large -right-[160px] top-[5800px] rotate-[197deg]"}/>
                         </div>
                         <div className="float">
@@ -334,7 +343,7 @@ export default function Layout1() {
                                               className={"fixed  x2-large -right-[60px] top-[4200px] rotate-[28deg]"}/>
                         </div>
                         <div className="float">
-                            <BlockWithStripes fill="orange"
+                            <BlockWithStripes fill="red"
                                               className={"fixed  x-large -right-[1660px] top-[4000px] -rotate-[146deg]"}/>
                         </div>
                         <div className="float">
@@ -346,7 +355,7 @@ export default function Layout1() {
                                               className={"fixed  large -right-[843px] top-[3290px] -rotate-[188deg]"}/>
                         </div>
                         <div className="float">
-                            <BlockWithStripes fill="purple"
+                            <BlockWithStripes fill="red"
                                               className={"fixed  huge -right-[119px] top-[2900px] rotate-[107deg]"}/>
                         </div>
                         <div className="float">
@@ -386,7 +395,7 @@ export default function Layout1() {
                                               className={"fixed  large -right-[1435px]  top-[3900px] rotate-[190deg]"}/>
                         </div>
                         <div className="float">
-                            <BlockWithStripes fill="purple"
+                            <BlockWithStripes fill="red"
                                               className={"fixed  x3-huge -right-[1599px]  top-[2900px] -rotate-[142deg]"}/>
                         </div>
                         <div className="float">
@@ -406,7 +415,7 @@ export default function Layout1() {
                                               className={"fixed  x-large right-[60px]  top-[700px] -rotate-[251deg]"}/>
                         </div>
                         <div className="float">
-                            <BlockWithStripes fill="pink"
+                            <BlockWithStripes fill="red"
                                               className={"fixed  huge -right-[1620px]  top-[122px] rotate-[171deg]"}/>
                         </div>
                         <div className="float">
@@ -426,7 +435,7 @@ export default function Layout1() {
 
                 </div>
             </div>
-            <div className="bg-transparent flex justify-center top-0 layer1">
+            <div className="bg-transparent flex justify-center top-0 layer1 relative">
                 <div className="sm:w-[625px] min-w-[325px] sm:w-1/2 w-10/12  absolute top-5 rounded-lg">
 
                     <ProfileSection/>
@@ -434,7 +443,7 @@ export default function Layout1() {
                     <HeroSection/>
 
                     {/*career journey*/}
-                    <CareerJourney/>
+                    <CareerJourney className={"flex flex-col"}/>
 
                     {/*projects*/}
                     <div className="mt-24">
@@ -446,95 +455,117 @@ export default function Layout1() {
                                 ">
                             Projects
                         </h1>
+
                         <div className="flex flex-col">
 
-                            <div
-                                className="mb-10 flex justify-center items-center text-white bg-indigo-600 rounded-xl border-8 border-double border-s-pink-600">
-                                <div className="text-md">
-
+                            {/*my site*/}
+                            <div className="mb-10 grid grid-cols-2 text-white bg-[#3B60E4] p-4">
+                                <div>
                                     <Image
-                                        className="float-left"
-                                        width="200" height="200" src="/jumpingLego.png"/>
-                                    <h1 className="text-with-red-shadow-no-gradient font-bold text-xl">My Site</h1>
-                                    <div className="">
+                                        className="float-start"
+                                        width="250" height="500" src="/my-site.png"
+                                        alt="Picture of this site"/>
+                                </div>
+
+                                <div className="text-md">
+                                    <h1 className="font-bold">
+                                        My Site
+                                    </h1>
+                                    <div className="mt-4 font-light">
                                         <div>This is my personal site to show off what I've been up
                                             to! Click the github icon to see the source code for this project.
                                         </div>
-                                        <div className="mt-6 mb-4">Build with: Next.js, Javascript, Tailwind</div>
                                     </div>
 
-                                    <Link
-                                        href={"https://github.com/J-L-C/my-site"}>
-                                        <svg
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            className="h-10 w-10 inline-block fill-[#fff] mb-4"
-                                            viewBox="0 0 24 24">
-                                            <path
-                                                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                                        </svg>
-                                    </Link>
+                                    <div className="mt-6 mb-4 font-light">Built with Next.js, Javascript, Tailwind</div>
+                                    <GithubLink fill="white" href={"https://github.com/J-L-C/my-site"}/>
+                                </div>
+                            </div>
 
+                            {/*under construction*/}
+                            <div className="mb-10 grid grid-cols-2 text-white bg-[#3B60E4] p-4">
+                                <div>
+                                    <Image
+                                        className="float-start"
+                                        width="250" height="500" src="/under-construction.png"
+                                        alt="Picture of my under construction site I made as a placeholder for this site."/>
+                                </div>
+
+                                <div className="text-md">
+                                    <h1 className="font-bold">
+                                        Under Construction
+                                    </h1>
+                                    <div className="mt-4 font-light">
+                                        A site I built as a placeholder for my main site while I was still working
+                                        on version 1.
+                                    </div>
+
+                                    <div className="mt-6 mb-4 font-light">Built with Next.js, Javascript, Tailwind</div>
+                                    <GithubLink fill="white" href={"https://github.com/J-L-C/under-construction"}/>
                                 </div>
                             </div>
 
 
-                            <div
-                                className="mb-10 flex justify-center items-center text-white bg-indigo-600 rounded-xl border-8 border-e-amber-600">
-                                <div className="text-md">
-
+                            {/*price tracker*/}
+                            <div className="mb-10 grid grid-cols-2 text-white bg-[#3B60E4] p-4">
+                                <div>
                                     <Image
-                                        className="float-left"
-                                        width="200" height="200" src="/jumpingLego.png"/>
-                                    <h1 className="text-with-red-shadow-no-gradient font-bold text-xl">My Site</h1>
-                                    <div className="">
-                                        <div>This is my personal site to show off what I've been up
-                                            to! Click the github icon to see the source code for this project.
-                                        </div>
-                                        <div className="mt-6 mb-4">Build with: Next.js, Javascript, Tailwind</div>
+                                        className="float-start"
+                                        width="250" height="500" src="/price-tracker-code.png"
+                                        alt="Generic picture of code displayed on a screen with a black background and colorful IDE text highlights."/>
+                                </div>
+
+                                <div className="text-md">
+                                    <h1 className="font-bold">
+                                        Price Tracker
+                                    </h1>
+                                    <div className="mt-4 font-light">
+                                        This is a small project I put together to setup a bot that
+                                        would periodically fetch price data from TCGplayer for items I wanted
+                                        to track. Eventually, I want to be able to generate price alerts,
+                                        comparative trends, and expand the scope beyond just tracking on
+                                        TCGPlayer.
                                     </div>
 
-                                    <Link
-                                        href={"https://github.com/J-L-C/my-site"}>
-                                        <svg
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            className="h-10 w-10 inline-block fill-[#fff] mb-4"
-                                            viewBox="0 0 24 24">
-                                            <path
-                                                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                                        </svg>
-                                    </Link>
-
+                                    <div className="mt-6 mb-4 font-light">Built with Node.js, Javascript, MongoDB</div>
+                                    <GithubLink fill="white" href={"https://github.com/J-L-C/price-tracker"}/>
                                 </div>
                             </div>
 
-                            <div
-                                className="mb-10 flex justify-center items-center text-white bg-indigo-600 rounded-xl border-8 border-s-emerald-600">
-                                <div className="text-md">
-
+                            {/*lego 3d model*/}
+                            <div className="mb-10 grid grid-cols-2 text-white bg-[#3B60E4] p-4">
+                                <div>
                                     <Image
-                                        className="float-left"
-                                        width="200" height="200" src="/jumpingLego.png"/>
-                                    <h1 className="text-with-red-shadow-no-gradient font-bold text-xl">My Site</h1>
-                                    <div className="">
-                                        <div>This is my personal site to show off what I've been up
-                                            to! Click the github icon to see the source code for this project.
+                                        className="float-start"
+                                        width="250" height="500" src="/jumpingLego.png"
+                                        alt="Picture of a 3D model of a lego person mid jump"/>
+                                </div>
+
+                                <div className="text-md">
+                                    <h1 className="font-bold">
+                                        3D Model - Lego
+                                    </h1>
+                                    <div>
+                                        <div className="mt-4 font-light">
+                                            My first attempt at making a 3D model in Blender following a very
+                                            detailed tutorial! Had a ton of fun making this!
                                         </div>
-                                        <div className="mt-6 mb-4">Build with: Next.js, Javascript, Tailwind</div>
+
+                                        <div className="mt-6 mb-4 font-light">Built with Blender</div>
                                     </div>
 
-                                    <Link
-                                        href={"https://github.com/J-L-C/my-site"}>
-                                        <svg
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            className="h-10 w-10 inline-block fill-[#fff] mb-4"
-                                            viewBox="0 0 24 24">
-                                            <path
-                                                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                                        </svg>
-                                    </Link>
-
+                                    <GithubLink
+                                        fill="white"
+                                        className="inline-block mr-4 mb-20"
+                                                href={"https://github.com/J-L-C/lego-3d-model"}/>
+                                    <YoutubeLink
+                                        width="90"
+                                        height="90"
+                                        className="inline-block"
+                                        href={"https://youtu.be/asoTKacBYaU"}/>
                                 </div>
                             </div>
+
 
                         </div>
                     </div>
