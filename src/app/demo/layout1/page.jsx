@@ -138,122 +138,6 @@ export default function Layout1() {
 
     return (
         <div className="parallax__viewport">
-            <div className={"absolute layer4"}>
-                {/*<div className={""}>*/}
-
-                {/*    <div className="">*/}
-
-                {/*        <div className="float">*/}
-                {/*            <BlockWithStripes fill="blue"*/}
-                {/*                              className={"fixed x-large -right-[160px] top-[5800px] rotate-[197deg]"}/>*/}
-                {/*        </div>*/}
-                {/*        <div className="float">*/}
-                {/*            <BlockWithStripes fill="red"*/}
-                {/*                              className={"fixed x-large -right-[760px] top-[5100px] -rotate-[43deg]"}/>*/}
-                {/*        </div>*/}
-                {/*        <div className="float">*/}
-                {/*            <BlockWithStripes fill="blue"*/}
-                {/*                              className={"fixed  x-large -right-[1200px] top-[4800px] rotate-[357deg]"}/>*/}
-                {/*        </div>*/}
-                {/*        <div className="float">*/}
-                {/*            <BlockWithStripes fill="red"*/}
-                {/*                              className={"fixed  large -right-[60px] top-[4500px] -rotate-[105deg]"}/>*/}
-                {/*        </div>*/}
-
-
-                {/*        <div className="float">*/}
-                {/*            <BlockWithStripes fill="blue"*/}
-                {/*                              className={"fixed  x2-large -right-[60px] top-[4200px] rotate-[28deg]"}/>*/}
-                {/*        </div>*/}
-                {/*        <div className="float">*/}
-                {/*            <BlockWithStripes fill="red"*/}
-                {/*                              className={"fixed  x-large -right-[660px] top-[4000px] -rotate-[146deg]"}/>*/}
-                {/*        </div>*/}
-                {/*        <div className="float">*/}
-                {/*            <BlockWithStripes fill="blue"*/}
-                {/*                              className={"fixed  large -right-[1060px] top-[3600px] -rotate-[80deg]"}/>*/}
-                {/*        </div>*/}
-                {/*        <div className="float">*/}
-                {/*            <BlockWithStripes fill="red"*/}
-                {/*                              className={"fixed  large -right-[843px] top-[3290px] -rotate-[188deg]"}/>*/}
-                {/*        </div>*/}
-                {/*        <div className="float">*/}
-                {/*            <BlockWithStripes fill="blue"*/}
-                {/*                              className={"fixed  large -right-[399px] top-[2900px] rotate-[37deg]"}/>*/}
-                {/*        </div>*/}
-                {/*        <div className="float">*/}
-                {/*            <BlockWithStripes fill="red"*/}
-                {/*                              className={"fixed  large -right-[899px] top-[2630px] -rotate-[166deg]"}/>*/}
-                {/*        </div>*/}
-                {/*        <div className="float">*/}
-                {/*            <BlockWithStripes fill="blue"*/}
-                {/*                              className={"fixed  large -right-[588px] top-[2439px] rotate-[306deg]"}/>*/}
-                {/*        </div>*/}
-                {/*        <div className="float">*/}
-                {/*            <BlockWithStripes fill="red"*/}
-                {/*                              className={" fixed  large -right-[166px] top-[2100px] -rotate-[195deg]"}/>*/}
-                {/*        </div>*/}
-                {/*        <div className="float">*/}
-                {/*            <BlockWithStripes fill="black"*/}
-                {/*                              className={"fixed  large -right-[666px] top-[1800px] rotate-[211deg]"}/>*/}
-                {/*        </div>*/}
-                {/*        <div className="float">*/}
-                {/*            <BlockWithStripes fill="orange"*/}
-                {/*                              className={"fixed  large -right-[999px] top-[1500px] -rotate-[89deg]"}/>*/}
-                {/*        </div>*/}
-                {/*        <div className="float">*/}
-                {/*            <BlockWithStripes fill="black"*/}
-                {/*                              className={"fixed  large -right-[666px]  top-[1200px] rotate-[352deg]"}/>*/}
-                {/*        </div>*/}
-                {/*        <div className="float">*/}
-                {/*            <BlockWithStripes fill="black"*/}
-                {/*                              className={"fixed  large -right-[555px]  top-[900px] -rotate-[115deg]"}/>*/}
-                {/*        </div>*/}
-                {/*        <div className="float">*/}
-                {/*            <BlockWithStripes fill="black"*/}
-                {/*                              className={"fixed  large -right-[1235px]  top-[3900px] rotate-[190deg]"}/>*/}
-                {/*        </div>*/}
-                {/*        <div className="float">*/}
-                {/*            <BlockWithStripes fill="black"*/}
-                {/*                              className={"fixed  large -right-[1360px]  top-[2900px] -rotate-[142deg]"}/>*/}
-                {/*        </div>*/}
-                {/*        <div className="float">*/}
-                {/*            <BlockWithStripes fill="black"*/}
-                {/*                              className={"fixed  large -right-[460px]  top-[1900px] rotate-[1deg]"}/>*/}
-                {/*        </div>*/}
-                {/*        <div className="float">*/}
-                {/*            <BlockWithStripes fill="black"*/}
-                {/*                              className={"fixed  large -right-[360px]  top-[900px] -rotate-[8deg]"}/>*/}
-                {/*        </div>*/}
-                {/*        <div className="float">*/}
-                {/*            <BlockWithStripes fill="black"*/}
-                {/*                              className={"fixed  large -right-[260px]  top-[400px] rotate-[338deg]"}/>*/}
-                {/*        </div>*/}
-                {/*        <div className="float">*/}
-                {/*            <BlockWithStripes fill="black"*/}
-                {/*                              className={"fixed  x-huge -right-[860px]  top-[300px] -rotate-[251deg]"}/>*/}
-                {/*        </div>*/}
-                {/*        <div className="float">*/}
-                {/*            <BlockWithStripes fill="black"*/}
-                {/*                              className={"fixed  x-large -right-[1320px]  top-[222px] rotate-[171deg]"}/>*/}
-                {/*        </div>*/}
-                {/*        <div className="float">*/}
-                {/*            <BlockWithStripes fill="black"*/}
-                {/*                              className={"fixed  x2-large -right-[960px]  -top-[180px] -rotate-[84deg]"}/>*/}
-                {/*        </div>*/}
-                {/*        <div className="float">*/}
-                {/*            <BlockWithStripes fill="black"*/}
-                {/*                              className={"fixed  large -right-[1060px] -top-[400px] rotate-[90deg]"}/>*/}
-                {/*        </div>*/}
-                {/*        <div className="float">*/}
-                {/*            <BlockWithStripes fill="black"*/}
-                {/*                              className={"fixed  large -right-[1567px] -top-[90px] -rotate-[49deg]"}/>*/}
-                {/*        </div>*/}
-
-                {/*    </div>*/}
-
-                {/*</div>*/}
-            </div>
             <div className={"absolute layer3"}>
                 <div className={"rotate-180 bottom-0"}>
 
@@ -261,11 +145,43 @@ export default function Layout1() {
 
                         <div className="float">
                             <BlockWithStripes fill="blue"
-                                              className={"fixed huge -right-[100px] -top-[5800px] rotate-[197deg]"}/>
+                                              className={"fixed huge -right-[400px] -top-[5400px] rotate-[187deg]"}/>
                         </div>
                         <div className="float">
                             <BlockWithStripes fill="blue"
-                                              className={"fixed x-huge right-[760px] -top-[5100px] -rotate-[43deg]"}/>
+                                              className={"fixed medium -right-[500px] -top-[5800px] -rotate-[197deg]"}/>
+                        </div>
+                        <div className="float">
+                            <BlockWithStripes fill="blue"
+                                              className={"fixed large right-[800px] -top-[5300px] rotate-[197deg]"}/>
+                        </div>
+                        <div className="float">
+                            <BlockWithStripes fill="blue"
+                                              className={"fixed x-large -right-[800px] -top-[5800px] rotate-[197deg]"}/>
+                        </div>
+                        <div className="float">
+                            <BlockWithStripes fill="blue"
+                                              className={"fixed x2-large right-[1100px] -top-[6700px] rotate-[197deg]"}/>
+                        </div>
+                        <div className="float">
+                            <BlockWithStripes fill="blue"
+                                              className={"fixed small right-[1100px] -top-[5300px] rotate-[97deg]"}/>
+                        </div>
+                        <div className="float">
+                            <BlockWithStripes fill="blue"
+                                              className={"fixed massive right-[1190px] -top-[5700px] rotate-[97deg]"}/>
+                        </div>
+                        <div className="float">
+                            <BlockWithStripes fill="blue"
+                                              className={"fixed large -right-[100px] -top-[6300px] rotate-[297deg]"}/>
+                        </div>
+                        <div className="float">
+                            <BlockWithStripes fill="blue"
+                                              className={"fixed x-large -right-[100px] -top-[5800px] rotate-[137deg]"}/>
+                        </div>
+                        <div className="float">
+                            <BlockWithStripes fill="blue"
+                                              className={"fixed x-huge right-[1760px] -top-[5100px] -rotate-[43deg]"}/>
                         </div>
                         <div className="float">
                             <BlockWithStripes fill="blue"
@@ -283,15 +199,15 @@ export default function Layout1() {
                         </div>
                         <div className="float">
                             <BlockWithStripes fill="blue"
-                                              className={"fixed x2-large right-[1360px] -top-[4000px] -rotate-[146deg]"}/>
+                                              className={"fixed huge right-[1560px] -top-[4000px] -rotate-[176deg]"}/>
                         </div>
                         <div className="float">
                             <BlockWithStripes fill="blue"
-                                              className={"fixed x-large right-[1360px] -top-[3600px] -rotate-[80deg]"}/>
+                                              className={"fixed x-large right-[160px] -top-[3600px] -rotate-[80deg]"}/>
                         </div>
                         <div className="float">
                             <BlockWithStripes fill="blue"
-                                              className={"fixed large right-[1043px] -top-[3290px] -rotate-[188deg]"}/>
+                                              className={"fixed large right-[1343px] -top-[3290px] -rotate-[188deg]"}/>
                         </div>
                         <div className="float">
                             <BlockWithStripes fill="blue"
@@ -390,7 +306,7 @@ export default function Layout1() {
 
                 </div>
             </div>
-            <div className={"layer2 w-0 h-0"}>
+            <div className={"w-0 h-0 layer2"}>
                 <div className={""}>
 
                     <div className="">
@@ -401,7 +317,7 @@ export default function Layout1() {
                         </div>
                         <div className="float">
                             <BlockWithStripes fill="red"
-                                              className={"fixed x-large -right-[760px] top-[5100px] -rotate-[43deg]"}/>
+                                              className={"fixed x-large -right-[1760px] top-[5100px] -rotate-[43deg]"}/>
                         </div>
                         <div className="float">
                             <BlockWithStripes fill="red"
@@ -418,20 +334,20 @@ export default function Layout1() {
                                               className={"fixed  x2-large -right-[60px] top-[4200px] rotate-[28deg]"}/>
                         </div>
                         <div className="float">
-                            <BlockWithStripes fill="red"
-                                              className={"fixed  x-large -right-[660px] top-[4000px] -rotate-[146deg]"}/>
+                            <BlockWithStripes fill="orange"
+                                              className={"fixed  x-large -right-[1660px] top-[4000px] -rotate-[146deg]"}/>
                         </div>
                         <div className="float">
                             <BlockWithStripes fill="red"
-                                              className={"fixed  large -right-[1060px] top-[3600px] -rotate-[80deg]"}/>
+                                              className={"fixed  large -right-[1360px] top-[3600px] -rotate-[80deg]"}/>
                         </div>
                         <div className="float">
                             <BlockWithStripes fill="red"
                                               className={"fixed  large -right-[843px] top-[3290px] -rotate-[188deg]"}/>
                         </div>
                         <div className="float">
-                            <BlockWithStripes fill="red"
-                                              className={"fixed  huge -right-[259px] top-[2900px] rotate-[127deg]"}/>
+                            <BlockWithStripes fill="purple"
+                                              className={"fixed  huge -right-[119px] top-[2900px] rotate-[107deg]"}/>
                         </div>
                         <div className="float">
                             <BlockWithStripes fill="red"
@@ -455,7 +371,7 @@ export default function Layout1() {
                         </div>
                         <div className="float">
                             <BlockWithStripes fill="red"
-                                              className={"fixed  x2-large -right-[1449px] top-[1400px] -rotate-[199deg]"}/>
+                                              className={"fixed  x2-large -right-[1649px] top-[1400px] -rotate-[199deg]"}/>
                         </div>
                         <div className="float">
                             <BlockWithStripes fill="red"
@@ -467,11 +383,11 @@ export default function Layout1() {
                         </div>
                         <div className="float">
                             <BlockWithStripes fill="red"
-                                              className={"fixed  large -right-[1235px]  top-[3900px] rotate-[190deg]"}/>
+                                              className={"fixed  large -right-[1435px]  top-[3900px] rotate-[190deg]"}/>
                         </div>
                         <div className="float">
-                            <BlockWithStripes fill="red"
-                                              className={"fixed  large -right-[1460px]  top-[2900px] -rotate-[142deg]"}/>
+                            <BlockWithStripes fill="purple"
+                                              className={"fixed  x3-huge -right-[1599px]  top-[2900px] -rotate-[142deg]"}/>
                         </div>
                         <div className="float">
                             <BlockWithStripes fill="red"
@@ -483,15 +399,15 @@ export default function Layout1() {
                         </div>
                         <div className="float">
                             <BlockWithStripes fill="red"
-                                              className={"fixed  x-large -right-[260px]  top-[400px] rotate-[338deg]"}/>
+                                              className={"fixed  x-large -right-[60px]  top-[400px] rotate-[338deg]"}/>
                         </div>
                         <div className="float">
                             <BlockWithStripes fill="red"
-                                              className={"fixed  x-large -right-[160px]  top-[700px] -rotate-[251deg]"}/>
+                                              className={"fixed  x-large right-[60px]  top-[700px] -rotate-[251deg]"}/>
                         </div>
                         <div className="float">
-                            <BlockWithStripes fill="red"
-                                              className={"fixed  huge -right-[1320px]  top-[222px] rotate-[171deg]"}/>
+                            <BlockWithStripes fill="pink"
+                                              className={"fixed  huge -right-[1620px]  top-[122px] rotate-[171deg]"}/>
                         </div>
                         <div className="float">
                             <BlockWithStripes fill="red"
@@ -510,7 +426,7 @@ export default function Layout1() {
 
                 </div>
             </div>
-            <div className="bg-transparent flex justify-center top-0 layer1 ">
+            <div className="bg-transparent flex justify-center top-0 layer1">
                 <div className="sm:w-[625px] min-w-[325px] sm:w-1/2 w-10/12  absolute top-5 rounded-lg">
 
                     <ProfileSection/>
