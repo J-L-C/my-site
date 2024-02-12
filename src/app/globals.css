@@ -13,11 +13,6 @@ body {
     }
 }
 
-:root {
-    --random-x: calc(100vw * Math.random());
-    --random-y: calc(100vh * Math.random());
-    --random-rotation: calc(360deg * Math.random());
-}
 
 @layer base {
     h1 {
@@ -170,15 +165,15 @@ p {
     }
 }
 
-@keyframes random-x-position {
-    0% {
-        transform: translate3d(0, 0, 0)
-    }
+/*@keyframes random-x-position {*/
+/*    0% {*/
+/*        transform: translate3d(0, 0, 0)*/
+/*    }*/
 
-    100% {
-        transform: translate3d(var(--random-x) + "px", 0, 0)
-    }
-}
+/*    100% {*/
+/*        transform: translate3d(var(--random-x) + "px", 0, 0)*/
+/*    }*/
+/*}*/
 
 @keyframes cube-rotation {
     0% {
