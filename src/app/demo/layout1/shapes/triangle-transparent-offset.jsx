@@ -7,7 +7,7 @@ export default function TriangleTransparentOffset({className}) {
                     fill="#9D9D9D"/>
                 <path d="M0 61.5V0L53.3 30.8L0 61.5ZM3.09999 5.29999V56L47 30.6L3.09999 5.29999Z" fill="currentColor"/>
                 <path d="M0 61.5V0L53.3 30.8L0 61.5ZM3.09999 5.29999V56L47 30.6L3.09999 5.29999Z" fill="currentColor"
-                      fill-opacity="0.2"/>
+                      fillOpacity="0.2"/>
             </svg>
         </>
     )

@@ -30,7 +30,7 @@ export default function StrideSection({className}) {
             <div className="sm:mx-[23%] mx-[35%]">
                 <StrideLogo
                     click={onClick}
-                    className="sm:w-96 w-32 stride mt-4"
+                    className="paused sm:w-96 w-32 stride mt-4"
                     width="400"
                     height="150"
                 />

@@ -6,6 +6,13 @@ import ProfileSection from "@/app/demo/layout1/components/profile-section";
 import CareerJourney from "@/app/demo/layout1/components/career-journey";
 import {useEffect} from "react";
 import {convertTimeToNumber} from "@/app/demo/layout1/utils/convert";
+import BlobFive from "@/app/demo/layout1/shapes/blob-five";
+import BlockWithStripes from "@/app/demo/layout1/shapes/block-with-stripes";
+import FlatDonutDots from "@/app/demo/layout1/shapes/flat-donut-dots";
+import OneSwishCircle from "@/app/demo/layout1/shapes/one-swish-circle";
+import SolidWavyLine from "@/app/demo/layout1/shapes/solid-wavy-line";
+import TransparentWavyLine from "@/app/demo/layout1/shapes/transparent-wavy-line";
+import TriangleDotsOffset from "@/app/demo/layout1/shapes/triangle-dots-offset";
 
 export default function Layout1() {
 
@@ -17,6 +24,7 @@ export default function Layout1() {
     let allstateLogo;
     let sabreLogo;
     let santanderLogo;
+    let stripedDonut;
 
     let strideLogoTriggered = false;
     let improvingLogoTriggered = false;
@@ -26,6 +34,7 @@ export default function Layout1() {
     let allstateLogoTriggered = false;
     let sabreLogoTriggered = false;
     let santanderLogoTriggered = false;
+    let colorWheel = ["blue","red","pink","blue","black"]
 
     const triggerAnimation = (element) => {
 
@@ -115,6 +124,7 @@ export default function Layout1() {
         allstateLogo = document.getElementById("allstateLogo");
         sabreLogo = document.getElementById("sabreLogo");
         santanderLogo = document.getElementById("santanderLogo");
+        stripedDonut = document.getElementById("stripedDonut");
 
         window.addEventListener("scroll", triggerAnimationInView, true)
 
@@ -134,24 +144,356 @@ export default function Layout1() {
 
     return (
         <div className="parallax__viewport">
-            <div className={"absolute layer3"}>
+            <div className={"absolute layer4"}>
+                {/*<div className={""}>*/}
 
+                {/*    <div className="">*/}
+
+                {/*        <div className="float">*/}
+                {/*            <BlockWithStripes fill="blue"*/}
+                {/*                              className={"fixed x-large -right-[160px] top-[5800px] rotate-[197deg]"}/>*/}
+                {/*        </div>*/}
+                {/*        <div className="float">*/}
+                {/*            <BlockWithStripes fill="red"*/}
+                {/*                              className={"fixed x-large -right-[760px] top-[5100px] -rotate-[43deg]"}/>*/}
+                {/*        </div>*/}
+                {/*        <div className="float">*/}
+                {/*            <BlockWithStripes fill="blue"*/}
+                {/*                              className={"fixed  x-large -right-[1200px] top-[4800px] rotate-[357deg]"}/>*/}
+                {/*        </div>*/}
+                {/*        <div className="float">*/}
+                {/*            <BlockWithStripes fill="red"*/}
+                {/*                              className={"fixed  large -right-[60px] top-[4500px] -rotate-[105deg]"}/>*/}
+                {/*        </div>*/}
+
+
+                {/*        <div className="float">*/}
+                {/*            <BlockWithStripes fill="blue"*/}
+                {/*                              className={"fixed  x2-large -right-[60px] top-[4200px] rotate-[28deg]"}/>*/}
+                {/*        </div>*/}
+                {/*        <div className="float">*/}
+                {/*            <BlockWithStripes fill="red"*/}
+                {/*                              className={"fixed  x-large -right-[660px] top-[4000px] -rotate-[146deg]"}/>*/}
+                {/*        </div>*/}
+                {/*        <div className="float">*/}
+                {/*            <BlockWithStripes fill="blue"*/}
+                {/*                              className={"fixed  large -right-[1060px] top-[3600px] -rotate-[80deg]"}/>*/}
+                {/*        </div>*/}
+                {/*        <div className="float">*/}
+                {/*            <BlockWithStripes fill="red"*/}
+                {/*                              className={"fixed  large -right-[843px] top-[3290px] -rotate-[188deg]"}/>*/}
+                {/*        </div>*/}
+                {/*        <div className="float">*/}
+                {/*            <BlockWithStripes fill="blue"*/}
+                {/*                              className={"fixed  large -right-[399px] top-[2900px] rotate-[37deg]"}/>*/}
+                {/*        </div>*/}
+                {/*        <div className="float">*/}
+                {/*            <BlockWithStripes fill="red"*/}
+                {/*                              className={"fixed  large -right-[899px] top-[2630px] -rotate-[166deg]"}/>*/}
+                {/*        </div>*/}
+                {/*        <div className="float">*/}
+                {/*            <BlockWithStripes fill="blue"*/}
+                {/*                              className={"fixed  large -right-[588px] top-[2439px] rotate-[306deg]"}/>*/}
+                {/*        </div>*/}
+                {/*        <div className="float">*/}
+                {/*            <BlockWithStripes fill="red"*/}
+                {/*                              className={" fixed  large -right-[166px] top-[2100px] -rotate-[195deg]"}/>*/}
+                {/*        </div>*/}
+                {/*        <div className="float">*/}
+                {/*            <BlockWithStripes fill="black"*/}
+                {/*                              className={"fixed  large -right-[666px] top-[1800px] rotate-[211deg]"}/>*/}
+                {/*        </div>*/}
+                {/*        <div className="float">*/}
+                {/*            <BlockWithStripes fill="orange"*/}
+                {/*                              className={"fixed  large -right-[999px] top-[1500px] -rotate-[89deg]"}/>*/}
+                {/*        </div>*/}
+                {/*        <div className="float">*/}
+                {/*            <BlockWithStripes fill="black"*/}
+                {/*                              className={"fixed  large -right-[666px]  top-[1200px] rotate-[352deg]"}/>*/}
+                {/*        </div>*/}
+                {/*        <div className="float">*/}
+                {/*            <BlockWithStripes fill="black"*/}
+                {/*                              className={"fixed  large -right-[555px]  top-[900px] -rotate-[115deg]"}/>*/}
+                {/*        </div>*/}
+                {/*        <div className="float">*/}
+                {/*            <BlockWithStripes fill="black"*/}
+                {/*                              className={"fixed  large -right-[1235px]  top-[3900px] rotate-[190deg]"}/>*/}
+                {/*        </div>*/}
+                {/*        <div className="float">*/}
+                {/*            <BlockWithStripes fill="black"*/}
+                {/*                              className={"fixed  large -right-[1360px]  top-[2900px] -rotate-[142deg]"}/>*/}
+                {/*        </div>*/}
+                {/*        <div className="float">*/}
+                {/*            <BlockWithStripes fill="black"*/}
+                {/*                              className={"fixed  large -right-[460px]  top-[1900px] rotate-[1deg]"}/>*/}
+                {/*        </div>*/}
+                {/*        <div className="float">*/}
+                {/*            <BlockWithStripes fill="black"*/}
+                {/*                              className={"fixed  large -right-[360px]  top-[900px] -rotate-[8deg]"}/>*/}
+                {/*        </div>*/}
+                {/*        <div className="float">*/}
+                {/*            <BlockWithStripes fill="black"*/}
+                {/*                              className={"fixed  large -right-[260px]  top-[400px] rotate-[338deg]"}/>*/}
+                {/*        </div>*/}
+                {/*        <div className="float">*/}
+                {/*            <BlockWithStripes fill="black"*/}
+                {/*                              className={"fixed  x-huge -right-[860px]  top-[300px] -rotate-[251deg]"}/>*/}
+                {/*        </div>*/}
+                {/*        <div className="float">*/}
+                {/*            <BlockWithStripes fill="black"*/}
+                {/*                              className={"fixed  x-large -right-[1320px]  top-[222px] rotate-[171deg]"}/>*/}
+                {/*        </div>*/}
+                {/*        <div className="float">*/}
+                {/*            <BlockWithStripes fill="black"*/}
+                {/*                              className={"fixed  x2-large -right-[960px]  -top-[180px] -rotate-[84deg]"}/>*/}
+                {/*        </div>*/}
+                {/*        <div className="float">*/}
+                {/*            <BlockWithStripes fill="black"*/}
+                {/*                              className={"fixed  large -right-[1060px] -top-[400px] rotate-[90deg]"}/>*/}
+                {/*        </div>*/}
+                {/*        <div className="float">*/}
+                {/*            <BlockWithStripes fill="black"*/}
+                {/*                              className={"fixed  large -right-[1567px] -top-[90px] -rotate-[49deg]"}/>*/}
+                {/*        </div>*/}
+
+                {/*    </div>*/}
+
+                {/*</div>*/}
             </div>
-            <div className={"absolute layer2"}>
-                <div className={""}>
-                    {/*<StripedBall className={"spin w-10 h-10"}/>*/}
-                    {/*<TriangleSolidBackOffset className={"spin w-10 h-10"}/>*/}
-                    {/*<TriangleTransparentOffset className={"spin w-10 h-10"}/>*/}
-                    {/*<TriangleSolidFrontOffset className={"spin w-10 h-10"}/>*/}
+            <div className={"absolute layer3"}>
+                <div className={"rotate-180 bottom-0"}>
+
+                    <div className="">
+
+                        <div className="float">
+                            <BlockWithStripes fill="orange"
+                                              className={"fixed huge -right-[100px] -top-[5800px] rotate-[197deg]"}/>
+                        </div>
+                        <div className="float">
+                            <BlockWithStripes fill="orange"
+                                              className={"fixed x-huge right-[760px] -top-[5100px] -rotate-[43deg]"}/>
+                        </div>
+                        <div className="float">
+                            <BlockWithStripes fill="orange"
+                                              className={"fixed  large right-[1200px] -top-[4800px] rotate-[357deg]"}/>
+                        </div>
+                        <div className="float">
+                            <BlockWithStripes fill="orange"
+                                              className={"fixed  medium right-[60px] -top-[4500px] -rotate-[105deg]"}/>
+                        </div>
 
 
-                    {/*<svg className="spin" width="100" height="100" viewBox="0 0 100 100">*/}
-                    {/*    <rect width={100} height={100} fill="blue"/>*/}
-                    {/*</svg>*/}
+                        <div className="float">
+                            <BlockWithStripes fill="orange"
+                                              className={"fixed huge right-[60px] -top-[4200px] rotate-[113deg]"}/>
+                        </div>
+                        <div className="float">
+                            <BlockWithStripes fill="orange"
+                                              className={"fixed x2-large right-[1360px] -top-[4000px] -rotate-[146deg]"}/>
+                        </div>
+                        <div className="float">
+                            <BlockWithStripes fill="orange"
+                                              className={"fixed x-large right-[1360px] -top-[3600px] -rotate-[80deg]"}/>
+                        </div>
+                        <div className="float">
+                            <BlockWithStripes fill="orange"
+                                              className={"fixed large right-[1043px] -top-[3290px] -rotate-[188deg]"}/>
+                        </div>
+                        <div className="float">
+                            <BlockWithStripes fill="orange"
+                                              className={"fixed medium right-[399px] -top-[2900px] rotate-[37deg]"}/>
+                        </div>
+                        <div className="float">
+                            <BlockWithStripes fill="orange"
+                                              className={"fixed  large right-[1199px] -top-[2630px] -rotate-[172deg]"}/>
+                        </div>
+                        <div className="float">
+                            <BlockWithStripes fill="orange"
+                                              className={"fixed  large right-[1588px] -top-[2439px] rotate-[146deg]"}/>
+                        </div>
+                        <div className="float">
+                            <BlockWithStripes fill="purple"
+                                              className={" fixed  large right-[66px] -top-[2100px] -rotate-[123deg]"}/>
+                        </div>
+                        <div className="float">
+                            <BlockWithStripes fill="purple"
+                                              className={"fixed  x-large right-[666px] -top-[1500px] rotate-[111deg]"}/>
+                        </div>
+                        <div className="float">
+                            <BlockWithStripes fill="orange"
+                                              className={"fixed  large right-[999px] -top-[1500px] -rotate-[89deg]"}/>
+                        </div>
+                        <div className="float">
+                            <BlockWithStripes fill="purple"
+                                              className={"fixed  medium right-[666px] -top-[1200px] rotate-[352deg]"}/>
+                        </div>
+                        <div className="float">
+                            <BlockWithStripes fill="purple"
+                                              className={"fixed  large right-[535px] -top-[900px] -rotate-[115deg]"}/>
+                        </div>
+                        <div className="float">
+                            <BlockWithStripes fill="green"
+                                              className={"fixed  large right-[1235px] -top-[3900px] rotate-[190deg]"}/>
+                        </div>
+                        <div className="float">
+                            <BlockWithStripes fill="green"
+                                              className={"fixed  huge right-[1360px] -top-[2900px] -rotate-[142deg]"}/>
+                        </div>
+                        <div className="float">
+                            <BlockWithStripes fill="green"
+                                              className={"fixed  medium right-[460px] -top-[1900px] rotate-[1deg]"}/>
+                        </div>
+                        <div className="float">
+                            <BlockWithStripes fill="green"
+                                              className={"fixed large right-[360px] -top-[900px] -rotate-[3deg]"}/>
+                        </div>
+                        <div className="float">
+                            <BlockWithStripes fill="green"
+                                              className={"fixed  x-huge -right-[40px] -top-[400px] rotate-[338deg]"}/>
+                        </div>
+                        <div className="float">
+                            <BlockWithStripes fill="green"
+                                              className={"fixed  medium right-[860px] -top-[300px] -rotate-[251deg]"}/>
+                        </div>
+                        <div className="float">
+                            <BlockWithStripes fill="green"
+                                              className={"fixed  x-large right-[1370px] -top-[202px] rotate-[171deg]"}/>
+                        </div>
+                        <div className="float">
+                            <BlockWithStripes fill="green"
+                                              className={"fixed  x2-large right-[890px]  -top-[180px] -rotate-[94deg]"}/>
+                        </div>
+                        <div className="float">
+                            <BlockWithStripes fill="green"
+                                              className={"fixed  large right-[1060px] -top-[400px] rotate-[90deg]"}/>
+                        </div>
+                        <div className="float">
+                            <BlockWithStripes fill="red"
+                                              className={"fixed  large right-[1567px] -top-[90px] -rotate-[49deg]"}/>
+                        </div>
+
+                    </div>
+
                 </div>
             </div>
-            <div className={"bg-transparent flex justify-center top-0 parallax__layer layer1"}>
-                <div className={" sm:w-[625px] min-w-[325px] sm:w-1/2 w-10/12  absolute top-5 rounded-lg"}>
+            <div className={"layer2 w-0 h-0"}>
+                <div className={""}>
+
+                    <div className="">
+
+                        <div className="float">
+                            <BlockWithStripes fill="blue"
+                                              className={"fixed x-large -right-[160px] top-[5800px] rotate-[197deg]"}/>
+                        </div>
+                        <div className="float">
+                            <BlockWithStripes fill="red"
+                                              className={"fixed x-large -right-[760px] top-[5100px] -rotate-[43deg]"}/>
+                        </div>
+                        <div className="float">
+                            <BlockWithStripes fill="blue"
+                                              className={"fixed  x-large -right-[1200px] top-[4800px] rotate-[357deg]"}/>
+                        </div>
+                        <div className="float">
+                            <BlockWithStripes fill="red"
+                                              className={"fixed  large -right-[60px] top-[4500px] -rotate-[105deg]"}/>
+                        </div>
+
+
+                        <div className="float">
+                            <BlockWithStripes fill="blue"
+                                              className={"fixed  x2-large -right-[60px] top-[4200px] rotate-[28deg]"}/>
+                        </div>
+                        <div className="float">
+                            <BlockWithStripes fill="red"
+                                              className={"fixed  x-large -right-[660px] top-[4000px] -rotate-[146deg]"}/>
+                        </div>
+                        <div className="float">
+                            <BlockWithStripes fill="blue"
+                                              className={"fixed  large -right-[1060px] top-[3600px] -rotate-[80deg]"}/>
+                        </div>
+                        <div className="float">
+                            <BlockWithStripes fill="red"
+                                              className={"fixed  large -right-[843px] top-[3290px] -rotate-[188deg]"}/>
+                        </div>
+                        <div className="float">
+                            <BlockWithStripes fill="blue"
+                                              className={"fixed  large -right-[399px] top-[2900px] rotate-[37deg]"}/>
+                        </div>
+                        <div className="float">
+                            <BlockWithStripes fill="red"
+                                              className={"fixed  large -right-[899px] top-[2630px] -rotate-[166deg]"}/>
+                        </div>
+                        <div className="float">
+                            <BlockWithStripes fill="blue"
+                                              className={"fixed  large -right-[588px] top-[2439px] rotate-[306deg]"}/>
+                        </div>
+                        <div className="float">
+                            <BlockWithStripes fill="red"
+                                              className={" fixed  large -right-[166px] top-[2100px] -rotate-[195deg]"}/>
+                        </div>
+                        <div className="float">
+                            <BlockWithStripes fill="black"
+                                              className={"fixed  large -right-[666px] top-[1800px] rotate-[211deg]"}/>
+                        </div>
+                        <div className="float">
+                            <BlockWithStripes fill="orange"
+                                              className={"fixed  large -right-[999px] top-[1200px] -rotate-[89deg]"}/>
+                        </div>
+                        <div className="float">
+                            <BlockWithStripes fill="black"
+                                              className={"fixed  large -right-[666px]  top-[1200px] rotate-[352deg]"}/>
+                        </div>
+                        <div className="float">
+                            <BlockWithStripes fill="black"
+                                              className={"fixed  large -right-[555px]  top-[900px] -rotate-[115deg]"}/>
+                        </div>
+                        <div className="float">
+                            <BlockWithStripes fill="black"
+                                              className={"fixed  large -right-[1235px]  top-[3900px] rotate-[190deg]"}/>
+                        </div>
+                        <div className="float">
+                            <BlockWithStripes fill="black"
+                                              className={"fixed  large -right-[1360px]  top-[2900px] -rotate-[142deg]"}/>
+                        </div>
+                        <div className="float">
+                            <BlockWithStripes fill="black"
+                                              className={"fixed  large -right-[460px]  top-[1900px] rotate-[1deg]"}/>
+                        </div>
+                        <div className="float">
+                            <BlockWithStripes fill="black"
+                                              className={"fixed  medium -right-[360px]  top-[900px] -rotate-[8deg]"}/>
+                        </div>
+                        <div className="float">
+                            <BlockWithStripes fill="blue"
+                                              className={"fixed  x-large -right-[260px]  top-[400px] rotate-[338deg]"}/>
+                        </div>
+                        <div className="float">
+                            <BlockWithStripes fill="green"
+                                              className={"fixed  x-large -right-[860px]  top-[300px] -rotate-[251deg]"}/>
+                        </div>
+                        <div className="float">
+                            <BlockWithStripes fill="green"
+                                              className={"fixed  huge -right-[1320px]  top-[222px] rotate-[171deg]"}/>
+                        </div>
+                        <div className="float">
+                            <BlockWithStripes fill="green"
+                                              className={"fixed  x2-large -right-[960px]  -top-[180px] -rotate-[84deg]"}/>
+                        </div>
+                        <div className="float">
+                            <BlockWithStripes fill="blue"
+                                              className={"fixed  medium -right-[1160px] -top-[400px] rotate-[90deg]"}/>
+                        </div>
+                        <div className="float">
+                            <BlockWithStripes fill="blue"
+                                              className={"fixed  medium -right-[1567px] -top-[90px] -rotate-[51deg]"}/>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+            <div className="bg-transparent flex justify-center top-0 layer1">
+                <div className="sm:w-[625px] min-w-[325px] sm:w-1/2 w-10/12  absolute top-5 rounded-lg">
 
                     <ProfileSection/>
 

@@ -3,26 +3,34 @@
 @tailwind utilities;
 
 body {
-  margin: 0;
-  overflow-x: hidden;
+    margin: 0;
+    overflow-x: hidden;
 }
 
 @layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+    .text-balance {
+        text-wrap: balance;
+    }
+}
+
+:root {
+    --random-x: calc(100vw * Math.random());
+    --random-y: calc(100vh * Math.random());
+    --random-rotation: calc(360deg * Math.random());
 }
 
 @layer base {
-  h1 {
-    @apply text-3xl;
-  }
-  h2 {
-    @apply text-2xl;
-  }
-  h3 {
-    @apply text-xl;
-  }
+    h1 {
+        @apply text-3xl;
+    }
+
+    h2 {
+        @apply text-2xl;
+    }
+
+    h3 {
+        @apply text-xl;
+    }
 }
 
 p {
@@ -30,195 +38,418 @@ p {
     text-align: justify-all;
 }
 
-.parallax__viewport {
-  height: 100vh;
-
-  overflow-x: hidden;
-  overflow-y: auto;
-
-  perspective: 1px;
+.x-tiny{
+    width: 0.5rem;
+    height: 0.5rem;
 }
 
-.parallax__layer {
-  /*bottom: 0;*/
-  /*height: 100%;*/
-  /*left: 0;*/
-  /*position: absolute;*/
-  /*right: 0;*/
-  /*top: 0;*/
-  /*width: 100%;*/
+.tiny{
+    width: 1rem;
+    height: 1rem;
+}
+
+.x-small{
+    width: 2rem;
+    height: 2rem;
+}
+
+.small{
+    width: 4rem;
+    height: 4rem;
+}
+
+.medium{
+    width: 6rem;
+    height: 6rem;
+}
+
+.large{
+    width: 10rem;
+    height: 10rem;
+}
+
+.x-large{
+    width: 14rem;
+    height: 14rem;
+}
+
+.x2-large{
+    width: 18rem;
+    height: 18rem;
+}
+
+.huge{
+    width: 24rem;
+    height: 24rem;
+}
+
+.x-huge{
+    width: 28rem;
+    height: 28rem;
+}
+
+.x2-huge{
+    width: 32rem;
+    height: 32rem;
+}
+
+.x3-huge{
+    width: 36rem;
+    height: 36rem;
+}
+
+.massive{
+    width: 42rem;
+    height: 42rem;
+}
+
+.x-massive{
+    width: 48rem;
+    height: 48rem;
+}
+
+.x2-massive{
+    width: 56rem;
+    height: 56rem;
+}
+
+.parallax__viewport {
+    height: 100vh;
+
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    perspective: 1px;
 }
 
 .layer1 {
-  transform: translateZ(0);
+    transform: translateZ(0);
 }
 
 .layer2 {
-  transform: translateZ(-0.5px);
+    transform: translateZ(-1px);
 }
 
 .layer3 {
-  transform: translateZ(-2px);
+    transform: translateZ(-2px);
 }
 
-.layer3 {
-  transform: translateZ(-3px);
+.layer4 {
+    transform: translateZ(-3px);
 }
 
 @keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  50% {
-    transform: rotate(360deg);
-  }
-  100% {
-    transform: rotate(-360deg);
-  }
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(360deg);
+    }
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+
+@keyframes falling {
+    0% {
+        transform: translate3d(0, 0, 0)
+    }
+
+    100% {
+        transform: translate3d(-230px, 5040px, 0)
+    }
+}
+
+@keyframes falling-1 {
+    0% {
+        transform: translate3d(0, 0, 0)
+    }
+
+    100% {
+        transform: translate3d(-230px, 1040px, 0)
+    }
+}
+
+@keyframes random-x-position {
+    0% {
+        transform: translate3d(0, 0, 0)
+    }
+
+    100% {
+        transform: translate3d(var(--random-x) + "px", 0, 0)
+    }
+}
+
+@keyframes cube-rotation {
+    0% {
+        transform: rotate3d(1, 0, 0, 180deg)
+    }
+
+    100% {
+        transform: rotate3d(0, 0, 1, 180deg)
+    }
+}
+
+@keyframes gradient-animation {
+    0% {
+        color: #ff0000; /* Start color */
+    }
+    2% {
+        color: #00ff00; /* Middle color */
+    }
+    4% {
+        color: #0000ff; /* End color */
+    }
+
+    5% {
+        color: #0a0000; /* End color */
+    }
+}
+
+.gradient-animation {
+    animation: gradient-animation 10s infinite;
 }
 
 .spin {
-  animation: spin 20s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+    animation: spin 10s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+.cube-rotation {
+    animation: cube-rotation 10s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+.falling {
+    animation: falling 16s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+.spin-fall {
+    animation: falling 20s infinite, spin 10s infinite;
+}
+
+.random-x-position {
+    animation: random-x-position 0s;
+}
+
+.paused {
+    animation-play-state: paused;
 }
 
 .text-outline {
-    -webkit-text-stroke-width: 1px; /* Width of the outline */
+    -webkit-text-strokeWidth: 1px; /* Width of the outline */
     -webkit-text-stroke-color: #ff0000; /* Color of the outline */
 }
 
+
+@keyframes animate-float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-50px);
+    }
+
+}
+
 .text-with-red-shadow {
-  text-shadow:
-          1px 1px 0px #780000,
-          1.25px 1.25px 0px #820101,
-          1.75px 1.75px 0px #8c0202,
-          2px 2px 0px #960202,
-          2.25px 2.25px 0px #a00202,
-          2.5px 2.5px 0px #aa0202,
-          2.75px 2.75px 0px #b40202,
-          3px 3px 0px #be0202,
-          3.25px 3.25px 0px #c80202,
-          3.50px 3.50px 0px #d20202,
-          3.75px 3.75px 0px #dc0202,
-          4px 4px 0px #e60202,
-          4.25px 4.25px 0px #f00202,
-          4.50px 4.50px 0px #fa0202,
-          4.75px 4.75px 0px #ff0202;
+    text-shadow: 1px 1px 0px #780000,
+    1.25px 1.25px 0px #820101,
+    1.75px 1.75px 0px #8c0202,
+    2px 2px 0px #960202,
+    2.25px 2.25px 0px #a00202,
+    2.5px 2.5px 0px #aa0202,
+    2.75px 2.75px 0px #b40202,
+    3px 3px 0px #be0202,
+    3.25px 3.25px 0px #c80202,
+    3.50px 3.50px 0px #d20202,
+    3.75px 3.75px 0px #dc0202,
+    4px 4px 0px #e60202,
+    4.25px 4.25px 0px #f00202,
+    4.50px 4.50px 0px #fa0202,
+    4.75px 4.75px 0px #ff0202;
 
 }
 
 .text-with-red-shadow-no-gradient {
-  text-shadow:
-          1px 1px 0px #b40202,
-          1.25px 1.25px 0px #b40202,
-          1.75px 1.75px 0px #b40202,
-          2px 2px 0px #b40202,
-          2.25px 2.25px 0px #b40202,
-          2.5px 2.5px 0px #b40202,
-          2.75px 2.75px 0px #b40202,
-          3px 3px 0px #b40202,
-          3.25px 3.25px 0px #b40202,
-          3.50px 3.50px 0px #b40202,
-          3.75px 3.75px 0px #b40202,
-          4px 4px 0px #b40202,
-          4.25px 4.25px 0px #b40202,
-          4.50px 4.50px 0px #b40202,
-          4.75px 4.75px 0px #b40202;
+    text-shadow: 1px 1px 0px #b40202,
+    1.25px 1.25px 0px #b40202,
+    1.75px 1.75px 0px #b40202,
+    2px 2px 0px #b40202,
+    2.25px 2.25px 0px #b40202,
+    2.5px 2.5px 0px #b40202,
+    2.75px 2.75px 0px #b40202,
+    3px 3px 0px #b40202,
+    3.25px 3.25px 0px #b40202,
+    3.50px 3.50px 0px #b40202,
+    3.75px 3.75px 0px #b40202,
+    4px 4px 0px #b40202,
+    4.25px 4.25px 0px #b40202,
+    4.50px 4.50px 0px #b40202,
+    4.75px 4.75px 0px #b40202;
 
 }
 
 .text-with-red-shadow-no-gradient-very-long {
-    text-shadow:
-            1px 1px 0px #b40202,
-            1.25px 1.25px 0px #b40202,
-            1.75px 1.75px 0px #b40202,
-            2px 2px 0px #b40202,
-            2.25px 2.25px 0px #b40202,
-            2.5px 2.5px 0px #b40202,
-            2.75px 2.75px 0px #b40202,
-            3px 3px 0px #b40202,
-            3.25px 3.25px 0px #b40202,
-            3.50px 3.50px 0px #b40202,
-            3.75px 3.75px 0px #b40202,
-            4px 4px 0px #b40202,
-            4.25px 4.25px 0px #b40202,
-            4.50px 4.50px 0px #b40202,
-            4.75px 4.75px 0px #b40202,
-            5px 5px 0px #b40202,
-            5.25px 5.25px 0px #b40202,
-            5.50px 5.50px 0px #b40202,
-            5.75px 5.75px 0px #b40202,
-            6px 6px 0px #b40202,
-            6.25px 6.25px 0px #b40202,
-            6.50px 6.50px 0px #b40202,
-            6.75px 6.75px 0px #b40202,
-            7px 7px 0px #b40202,
-            7.25px 7.25px 0px #b40202,
-            7.50px 7.50px 0px #b40202,
-            7.75px 7.75px 0px #b40202,
-            8px 8px 0px #b40202,
-            8.25px 8.25px 0px #b40202,
-            8.50px 8.50px 0px #b40202,
-            8.75px 8.75px 0px #b40202,
-            9px 9px 0px #b40202,
-            9.25px 9.25px 0px #b40202,
-            9.50px 9.50px 0px #b40202,
-            9.75px 9.75px 0px #b40202,
-            10px 10px 0px #b40202,
-            10.25px 10.25px 0px #b40202,
-            10.50px 10.50px 0px #b40202,
-            10.75px 10.75px 0px #b40202,
-            11px 11px 0px #b40202,
-            11.25px 11.25px 0px #b40202,
-            11.50px 11.50px 0px #b40202,
-            11.75px 11.75px 0px #b40202,
-            12px 12px 0px #b40202,
-            12.25px 12.25px 0px #b40202,
-            12.50px 12.50px 0px #b40202,
-            12.75px 12.75px 0px #b40202,
-            13px 13px 0px #b40202,
-            13.25px 13.25px 0px #b40202,
-            13.50px 13.50px 0px #b40202,
-            13.75px 13.75px 0px #b40202,
-            14px 14px 0px #b40202,
-            14.25px 14.25px 0px #b40202,
-            14.50px 14.50px 0px #b40202,
-            14.75px 14.75px 0px #b40202,
-            15px 15px 0px #b40202,
-            15.25px 15.25px 0px #b40202,
-            15.50px 15.50px 0px #b40202,
-            15.75px 15.75px 0px #b40202,
-            16px 16px 0px #b40202,
-            16.25px 16.25px 0px #b40202,
-            16.50px 16.50px 0px #b40202,
-            16.75px 16.75px 0px #b40202,
-            17px 17px 0px #b40202,
-            17.25px 17.25px 0px #b40202;
+    text-shadow: 1px 1px 0px #b40202,
+    1.25px 1.25px 0px #b40202,
+    1.75px 1.75px 0px #b40202,
+    2px 2px 0px #b40202,
+    2.25px 2.25px 0px #b40202,
+    2.5px 2.5px 0px #b40202,
+    2.75px 2.75px 0px #b40202,
+    3px 3px 0px #b40202,
+    3.25px 3.25px 0px #b40202,
+    3.50px 3.50px 0px #b40202,
+    3.75px 3.75px 0px #b40202,
+    4px 4px 0px #b40202,
+    4.25px 4.25px 0px #b40202,
+    4.50px 4.50px 0px #b40202,
+    4.75px 4.75px 0px #b40202,
+    5px 5px 0px #b40202,
+    5.25px 5.25px 0px #b40202,
+    5.50px 5.50px 0px #b40202,
+    5.75px 5.75px 0px #b40202,
+    6px 6px 0px #b40202,
+    6.25px 6.25px 0px #b40202,
+    6.50px 6.50px 0px #b40202,
+    6.75px 6.75px 0px #b40202,
+    7px 7px 0px #b40202,
+    7.25px 7.25px 0px #b40202,
+    7.50px 7.50px 0px #b40202,
+    7.75px 7.75px 0px #b40202,
+    8px 8px 0px #b40202,
+    8.25px 8.25px 0px #b40202,
+    8.50px 8.50px 0px #b40202,
+    8.75px 8.75px 0px #b40202,
+    9px 9px 0px #b40202,
+    9.25px 9.25px 0px #b40202,
+    9.50px 9.50px 0px #b40202,
+    9.75px 9.75px 0px #b40202,
+    10px 10px 0px #b40202,
+    10.25px 10.25px 0px #b40202,
+    10.50px 10.50px 0px #b40202,
+    10.75px 10.75px 0px #b40202,
+    11px 11px 0px #b40202,
+    11.25px 11.25px 0px #b40202,
+    11.50px 11.50px 0px #b40202,
+    11.75px 11.75px 0px #b40202,
+    12px 12px 0px #b40202,
+    12.25px 12.25px 0px #b40202,
+    12.50px 12.50px 0px #b40202,
+    12.75px 12.75px 0px #b40202,
+    13px 13px 0px #b40202,
+    13.25px 13.25px 0px #b40202,
+    13.50px 13.50px 0px #b40202,
+    13.75px 13.75px 0px #b40202,
+    14px 14px 0px #b40202,
+    14.25px 14.25px 0px #b40202,
+    14.50px 14.50px 0px #b40202,
+    14.75px 14.75px 0px #b40202,
+    15px 15px 0px #b40202,
+    15.25px 15.25px 0px #b40202,
+    15.50px 15.50px 0px #b40202,
+    15.75px 15.75px 0px #b40202,
+    16px 16px 0px #b40202,
+    16.25px 16.25px 0px #b40202,
+    16.50px 16.50px 0px #b40202,
+    16.75px 16.75px 0px #b40202,
+    17px 17px 0px #b40202,
+    17.25px 17.25px 0px #b40202;
 
 }
 
 .text-with-black-shadow {
-  text-shadow:
-          1px 1px 0px #000000,
-          1.25px 1.25px 0px #000000,
-          1.75px 1.75px 0px #000000,
-          2px 2px 0px #000000,
-          2.25px 2.25px 0px #000000,
-          2.5px 2.5px 0px #000000,
-          2.75px 2.75px 0px #000000;
+    text-shadow: 1px 1px 0px #000000,
+    1.25px 1.25px 0px #000000,
+    1.75px 1.75px 0px #000000,
+    2px 2px 0px #000000,
+    2.25px 2.25px 0px #000000,
+    2.5px 2.5px 0px #000000,
+    2.75px 2.75px 0px #000000;
 
 }
 
 .text-with-grey-shadow {
-    text-shadow:
-            1px 1px 0px rgba(176, 176, 176, 0.5),
-            1.25px 1.25px 0px rgba(176, 176, 176, 0.5),
-            1.75px 1.75px 0px rgba(176, 176, 176, 0.5),
-            2px 2px 0px rgba(176, 176, 176, 0.5);
-
+    text-shadow: 1px 1px 0px rgba(176, 176, 176, 0.5),
+    1.25px 1.25px 0px rgba(176, 176, 176, 0.5),
+    1.75px 1.75px 0px rgba(176, 176, 176, 0.5),
+    2px 2px 0px rgba(176, 176, 176, 0.5);
 }
 
-.background{
-  background-color: rgba(255, 255, 255, 0);
-  background-image: url("/texture.svg"), linear-gradient(to right, rgb(48, 84, 206) 0%, rgba(255, 254, 255, 0) 15%, rgba(180, 178, 225, 0) 85%, rgb(32, 75, 218) 100%);
+.background {
+    background-color: rgba(255, 255, 255, 0);
+    background-image: url("/texture.svg"), linear-gradient(to right, rgb(48, 84, 206) 0%, rgba(255, 254, 255, 0) 15%, rgba(180, 178, 225, 0) 85%, rgb(32, 75, 218) 100%);
+}
 
+.float {
+    animation: animate-float 7s cubic-bezier(.23,-0.02,.83,1.04) infinite;
+}
+
+.falling-delay-animation-100 {
+    animation: falling 20s cubic-bezier(0.4, 0, 0.2, 1);
+    animation-delay: 100ms;
+}
+
+.falling-delay-animation-150 {
+    animation: falling 20s cubic-bezier(0.4, 0, 0.2, 1);
+    animation-delay: 150ms;
+}
+
+.falling-delay-animation-200 {
+    animation: falling-1 20s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    animation-delay: 200ms;
+}
+
+.falling-delay-animation-250 {
+    animation: falling 20s cubic-bezier(0.4, 0, 0.2, 1);
+    animation-delay: 250ms;
+}
+
+.falling-delay-animation-300 {
+    animation: falling 20s cubic-bezier(0.4, 0, 0.2, 1);
+    animation-delay: 300ms;
+}
+
+.falling-delay-animation-350 {
+    animation: falling 20s cubic-bezier(0.4, 0, 0.2, 1);
+    animation-delay: 350ms;
+}
+
+.falling-delay-animation-400 {
+    animation: falling 20s cubic-bezier(0.4, 0, 0.2, 1);
+    animation-delay: 400ms;
+}
+
+.falling-delay-animation-450 {
+    animation: falling 20s cubic-bezier(0.4, 0, 0.2, 1);
+    animation-delay: 450ms;
+}
+
+.falling-delay-animation-500 {
+    animation: falling 20s cubic-bezier(0.4, 0, 0.2, 1);
+    animation-delay: 500ms;
+}
+
+.falling-delay-animation-550 {
+    animation: falling 20s cubic-bezier(0.4, 0, 0.2, 1);
+    animation-delay: 550ms;
+}
+
+.falling-delay-animation-600 {
+    animation: falling 20s cubic-bezier(0.4, 0, 0.2, 1);
+    animation-delay: 600ms;
+}
+
+.falling-delay-animation-650 {
+    animation: falling 20s cubic-bezier(0.4, 0, 0.2, 1);
+    animation-delay: 650ms;
+}
+
+.falling-delay-animation-700 {
+    animation: falling 20s cubic-bezier(0.4, 0, 0.2, 1);
+    animation-delay: 700ms;
+}
+
+.falling-delay-animation-750 {
+    animation: falling 20s cubic-bezier(0.4, 0, 0.2, 1);
+    animation-delay: 750ms;
 }
