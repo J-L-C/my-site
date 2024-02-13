@@ -144,7 +144,7 @@ export default function AboutMe() {
     return (
         <div className="parallax__viewport">
             <div className={"relative layer3"}>
-                <div className={"rotate-180 bottom-0"}>
+                <div className={"rotate-180 bottom-0 sm:inline-block hidden"}>
 
                     <div className="">
 
