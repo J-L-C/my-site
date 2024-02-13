@@ -28,10 +28,10 @@ body {
     }
 }
 
-p {
-    padding: 2rem;
-    text-align: justify-all;
-}
+/*p {*/
+/*    padding: 2rem;*/
+/*    text-align: justify-all;*/
+/*}*/
 
 .x-tiny{
     width: 0.5rem;

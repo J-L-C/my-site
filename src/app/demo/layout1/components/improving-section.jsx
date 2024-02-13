@@ -36,15 +36,23 @@ export default function ImprovingSection({className}) {
                 />
             </div>
             <div className="text-white p-8 text-justify bg-red-600">
+                <div className="text-center -mt-4 mb-4 text-gray-300 text-sm">[ 03/2021 - 02/2023 ]</div>
                 <p>
-                    Client: ‘Publishing & Education Company’ - Delivered new features for their testing
-                    center application, worked to reduce technical debt through upgrades and refactoring in
-                    order to prepare their application for GraavlVM - Native Image deployment across multiple
-                    Java/ Springboot services.
-                    Client: ‘Publishing & Education Company’ - Finished phase 1 of a product that improved
-                    the process for users who wanted to get started with building a certification exam,
-                    moving from emails and spreadsheets to a user friendly online portal.
+                    Encouraged to try something new, I join Object Partners (Later bought by Improving). I started
+                    consulting
+                    for a Publishing & Education Company where I got to experience a new industry. I worked closely with
+                    architects
+                    within the company to upgrade and update their platform to be able to deploy their application as a
+                    Native Image, something that was being cooked up over at Oracle. I also spent time building out
+                    parts of their application to help facilitate data dumps and getting that data from a testing center
+                    to an internal developer when issues arose.
                 </p>
+                <div className="mt-8 text-center">
+                    <h3 className="font-extrabold mb-4">Tech / Skills</h3>
+                    <div>
+                        Java &#9679; Spring Boot &#9679; GraalVM &#9679; JSP &#9679; Web Services &#9679; MariaDB
+                    </div>
+                </div>
             </div>
         </div>
     </>);

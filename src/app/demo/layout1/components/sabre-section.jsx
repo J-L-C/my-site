@@ -35,15 +35,25 @@ export default function SabreSection({className}) {
                     height="150"
                 />
             </div>
-            <div className="text-white bg-fuchsia-600">
+            <div className="text-white p-8 text-justify bg-fuchsia-600">
+                <div className="text-center -mt-4 mb-4 text-gray-300 text-sm">[ 10/2014 - 07/2017 ]</div>
                 <p>
-                    Collaborated with onsite and overseas-based data migration teams to create
-                    scripts
-                    that
-                    validated migration data for the AA/US Airways merger in the Sabre system.
-                    Wrote and maintained automation test scripts for the Sabre system for new
-                    features.
+                    It was here that I began to build my technical skills. Though I enjoyed the work of a Business
+                    Analyst
+                    I really had my heart set on being more technical and writing applications instead. At Sabre,
+                    I was challenged with building test automation for the Sabre system and for Sabre's web services.
+                    The most exciting project I worked on was the AA/US Airways data migrations. Using Jmeter and Java,
+                    I was able to validate large volumes of data, accessed through the Sabre system. Developers and
+                    other
+                    QAs used the reports I generated to find bugs and ensure a clean data migration when we went to
+                    production.
                 </p>
+                <div className="mt-8 text-center">
+                    <h3 className="font-extrabold mb-4">Tech / Skills</h3>
+                    <div>
+                        JMeter &#9679; Scripting &#9679; QTP &#9679; Java &#9679; SOATest (Soap Services)
+                    </div>
+                </div>
             </div>
         </div>
     </>);

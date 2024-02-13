@@ -29,11 +29,21 @@ export default function AaSection({className}) {
                     height="150"
                 />
             </div>
-            <div className="text-white bg-indigo-600">
+            <div className="text-white p-8 text-justify bg-indigo-600">
+                <div className="text-center -mt-4 mb-4 text-gray-300 text-sm">[ 12/2019 - 04/2020 ]</div>
                 <p>
-                    Worked on transforming AA.com legacy monolith into a micro services: using TDD
-                    principles and practices in a Paired Programming environment
+                    The travel industry pulled me back in when I join American Airlines. In my short time here, I worked
+                    to migrate some of there services over to Sabre Web Services and contributed to breaking their
+                    monolith
+                    in to microservices. As COVID hit, I decided I should find an industry that would be better equipped
+                    to weather the pandemic.
                 </p>
+                <div className="mt-8 text-center">
+                    <h3 className="font-extrabold mb-4">Tech / Skills</h3>
+                    <div>
+                        Java &#9679; Spring Boot &#9679; Sabre Web Services &#9679; IBM Cloud: PCF
+                    </div>
+                </div>
             </div>
         </div>
     </>);

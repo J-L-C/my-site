@@ -35,18 +35,28 @@ export default function AllstateSection({className}) {
                     height="150"
                 />
             </div>
-            <div className="text-white bg-pink-500">
+            <div className="text-white p-8 text-justify bg-pink-500">
+                <div className="text-center -mt-4 mb-4 text-gray-300 text-sm">[ 07/2017 - 04/2019 ]</div>
                 <p>
-                    Delivered a full stack web app for adjusters to submit work orders to outside
-                    vendors that are partnered with Allstate. This made it easier for adjusters to manage their
-                    work orders, simplified who Allstate partnered with, and reduced costs through negotiated
-                    rates between approved vendors and Allstate.
-                    To simplify how claim data is used by our teams, we built a web API for
-                    fetching it from the central database. This simplified the on-boarding process for claim data and
-                    streamlined the types of queries sent to the database.
-                    Fostered XP collaborative culture by engaging in XP ceremonies, practicing Paired
-                    Programming, and TDD
+                    At Allstate, I was introduced to and felt inspired by Extreme Programming! Along with a group of
+                    other
+                    fresh engineers, Allstate invested in us and took us through a 3 month training program with
+                    Galvanize.
+                    From there, I worked with some amazing engineers and we built a product that made it easier to
+                    access claim data for teams inside of Allstate. After that was launched, I was fortunate enough to
+                    travel to
+                    Norther Ireland to hand it off to the lab there. After that fortunate journey, I joined another team
+                    to deliver
+                    a product that streamlined how adjusters requested 3rd party services.
                 </p>
+                <div className="mt-8 text-center">
+                    <h3 className="font-extrabold mb-4">Tech / Skills</h3>
+                    <div>
+                        Java &#9679; Spring Boot &#9679; Full Stack &#9679; React &#9679; CSS &#9679; Material
+                        UI &#9679; System Design &#9679; Pivotal Cloud
+                        Foundry &#9679; SQL
+                    </div>
+                </div>
             </div>
         </div>
     </>);

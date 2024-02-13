@@ -30,14 +30,19 @@ export default function SantanderSection({className}) {
                     height="150"
                 />
             </div>
-            <div className="text-white bg-green-600">
+            <div className="text-white p-8 text-justify bg-green-600">
+                <div className="text-center -mt-4 mb-4 text-gray-300 text-sm">[ 06/2014 - 10/2014 ]</div>
                 <p>
-                    I worked closely with the Product Owner and Project Manager to create user
-                    stories,
-                    assist
-                    developers on design, and to keep team the team in sync with the needs of the
-                    business.
+                    As my first role outside of college, I got to experience Agile for the first time. I learned about
+                    the Software Development Life Cycle hands on and had the opportunity to work closely with the
+                    business, work diligently to remove roadblocks, and lead demos for our team to show off our work!
                 </p>
+                <div className="mt-8 text-center">
+                    <h3 className="font-extrabold mb-4">Tech / Skills</h3>
+                    <div>
+                        Agile &#9679; User Stories &#9679; Team Demos
+                    </div>
+                </div>
             </div>
         </div>
     </>);
