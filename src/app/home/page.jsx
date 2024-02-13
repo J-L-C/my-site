@@ -280,7 +280,7 @@ export default function AboutMe() {
                         </div>
                         <div className="animation-delay-100 float-slow">
                             <BlockWithStripes fill="#FF0060"
-                                              className={"absolute  x-huge -right-[40px] -top-[400px] rotate-[338deg]"}/>
+                                              className={"absolute  x-large right-[340px] -top-[300px] rotate-[38deg]"}/>
                         </div>
                         <div className="animation-delay-150 float-fast">
                             <BlockWithStripes fill="#00DFA2"
@@ -444,15 +444,15 @@ export default function AboutMe() {
                         <div className="flex flex-col">
 
                             {/*my site*/}
-                            <div className="mb-10 grid grid-cols-2 text-white bg-[#0445b3] p-4">
+                            <div className="mb-10 grid sm:grid-cols-2 text-white bg-[#0030a8] sm:p-4 p-8 text-justify">
                                 <div>
                                     <Image
-                                        className="float-start"
-                                        width="250" height="500" src="/my-site.png"
+                                        className="float-start "
+                                        width="250" height="250" src="/my-site.png"
                                         alt="Picture of this site"/>
                                 </div>
 
-                                <div className="text-md">
+                                <div className="text-md mt-6">
                                     <h1 className="font-bold">
                                         My Site
                                     </h1>
@@ -462,21 +462,21 @@ export default function AboutMe() {
                                         </div>
                                     </div>
 
-                                    <div className="mt-6 mb-4 font-light">Built with Next.js, Javascript, Tailwind</div>
+                                    <div className="mt-6 mb-4 font-semibold">Built with Next.js, Javascript, Tailwind</div>
                                     <GithubLink fill="white" href={"https://github.com/J-L-C/my-site"}/>
                                 </div>
                             </div>
 
                             {/*under construction*/}
-                            <div className="mb-10 grid grid-cols-2 text-white bg-[#033eaf] p-4">
+                            <div className="mb-10 grid sm:grid-cols-2 items-center text-white bg-[#0030a8] sm:p-4 p-8 text-justify">
                                 <div>
                                     <Image
                                         className="float-start"
-                                        width="250" height="500" src="/under-construction.png"
+                                        width="250" height="250" src="/under-construction.png"
                                         alt="Picture of my under construction site I made as a placeholder for this site."/>
                                 </div>
 
-                                <div className="text-md">
+                                <div className="text-md mt-6">
                                     <h1 className="font-bold">
                                         Under Construction
                                     </h1>
@@ -485,22 +485,22 @@ export default function AboutMe() {
                                         on version 1.
                                     </div>
 
-                                    <div className="mt-6 mb-4 font-light">Built with Next.js, Javascript, Tailwind</div>
+                                    <div className="mt-6 mb-4 font-semibold">Built with Next.js, Javascript, Tailwind</div>
                                     <GithubLink fill="white" href={"https://github.com/J-L-C/under-construction"}/>
                                 </div>
                             </div>
 
 
                             {/*price tracker*/}
-                            <div className="mb-10 grid grid-cols-2 text-white bg-[#0137ac] p-4">
+                            <div className="mb-10 grid sm:grid-cols-2 items-center text-white bg-[#0030a8] sm:p-4 p-8 text-justify">
                                 <div>
                                     <Image
                                         className="float-start"
-                                        width="250" height="500" src="/price-tracker-code.png"
+                                        width="250" height="250" src="/price-tracker-code.png"
                                         alt="Generic picture of code displayed on a screen with a black background and colorful IDE text highlights."/>
                                 </div>
 
-                                <div className="text-md">
+                                <div className="text-md mt-6">
                                     <h1 className="font-bold">
                                         Price Tracker
                                     </h1>
@@ -512,21 +512,21 @@ export default function AboutMe() {
                                         TCGPlayer.
                                     </div>
 
-                                    <div className="mt-6 mb-4 font-light">Built with Node.js, Javascript, MongoDB</div>
-                                    <GithubLink fill="white" href={"https://github.com/J-L-C/price-tracker"}/>
+                                    <div className="mt-6 mb-4 font-semibold">Built with Node.js, Javascript, MongoDB</div>
+                                    <GithubLink className="mb-4" fill="white" href={"https://github.com/J-L-C/price-tracker"}/>
                                 </div>
                             </div>
 
                             {/*lego 3d model*/}
-                            <div className="mb-10 grid grid-cols-2 text-white bg-[#0030a8] p-4">
+                            <div className="grid sm:grid-cols-2 items-center text-white bg-[#0030a8] sm:p-4 p-8 text-justify">
                                 <div>
                                     <Image
                                         className="float-start"
-                                        width="250" height="500" src="/jumpingLego.png"
+                                        width="250" height="250" src="/jumpingLego.png"
                                         alt="Picture of a 3D model of a lego person mid jump"/>
                                 </div>
 
-                                <div className="text-md">
+                                <div className="text-md mt-6">
                                     <h1 className="font-bold">
                                         3D Model - Lego
                                     </h1>
@@ -536,7 +536,7 @@ export default function AboutMe() {
                                             detailed tutorial! Had a ton of fun making this!
                                         </div>
 
-                                        <div className="mt-6 mb-4 font-light">Built with Blender</div>
+                                        <div className="mt-6 mb-4 font-semibold">Built with Blender</div>
                                     </div>
 
                                     <GithubLink
