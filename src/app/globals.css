@@ -165,17 +165,6 @@ html {background-color: #ccdbe3
     }
 }
 
-
-
-.spin {
-    animation: spin 10s cubic-bezier(0.4, 0, 0.2, 1) infinite;
-}
-
-.falling {
-    animation: falling 16s cubic-bezier(0.4, 0, 0.2, 1) infinite;
-}
-
-
 @keyframes animate-float {
     0%, 100% {
         transform: translateY(0);
@@ -195,6 +184,91 @@ html {background-color: #ccdbe3
     }
 
 }
+
+.spin {
+    animation: spin 10s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+.falling {
+    animation: falling 16s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+.float-slow {
+    animation: animate-float 12s cubic-bezier(.23,-0.02,.83,1.04) infinite;
+}
+
+.float {
+    animation: animate-float 8s cubic-bezier(.23,-0.02,.83,1.04) infinite;
+}
+
+.float-large-overshoot {
+    animation: animate-float 7s cubic-bezier(.34,1.16,.42,2.12) infinite;
+}
+
+.float-small-overshoot {
+    animation: animate-float 8s cubic-bezier(.3,.89,.45,1.33) infinite;
+}
+
+.float-extra-long {
+    animation: animate-float-extra-long 40s cubic-bezier(.67,.45,.31,.57) infinite;
+}
+
+.float-fast {
+    animation: animate-float 4s cubic-bezier(.23,-0.02,.83,1.04) infinite;
+}
+
+.animation-delay-100{
+    animation-delay: 100ms;
+}
+
+.animation-delay-150{
+    animation-delay: 150ms;
+}
+
+.animation-delay-200{
+    animation-delay: 200ms;
+}
+
+.animation-delay-250{
+    animation-delay: 250ms;
+}
+
+.animation-delay-300{
+    animation-delay: 300ms;
+}
+
+.animation-delay-400{
+    animation-delay: 400ms;
+}
+
+.animation-delay-500{
+    animation-delay: 500ms;
+}
+
+.animation-delay-600{
+    animation-delay: 600ms;
+}
+
+.animation-delay-650{
+    animation-delay: 650ms;
+}
+
+.animation-delay-700{
+    animation-delay: 700ms;
+}
+
+.animation-delay-750{
+    animation-delay: 750ms;
+}
+
+.animation-delay-800{
+    animation-delay: 800ms;
+}
+
+.animation-delay-850{
+    animation-delay: 850ms;
+}
+
 
 .text-with-red-shadow {
     text-shadow: 1px 1px 0px #780000,
@@ -335,85 +409,4 @@ html {background-color: #ccdbe3
     1.25px 1.25px 0px rgba(176, 176, 176, 0.5),
     1.75px 1.75px 0px rgba(176, 176, 176, 0.5),
     2px 2px 0px rgba(176, 176, 176, 0.5);
-}
-
-.background {
-    background-color: rgba(255, 255, 255, 0);
-    background-image: url("/texture.svg"), linear-gradient(to right, rgb(48, 84, 206) 0%, rgba(255, 254, 255, 0) 15%, rgba(180, 178, 225, 0) 85%, rgb(32, 75, 218) 100%);
-}
-
-.float-slow {
-    animation: animate-float 12s cubic-bezier(.23,-0.02,.83,1.04) infinite;
-}
-
-.float {
-    animation: animate-float 8s cubic-bezier(.23,-0.02,.83,1.04) infinite;
-}
-
-.float-large-overshoot {
-    animation: animate-float 7s cubic-bezier(.34,1.16,.42,2.12) infinite;
-}
-
-.float-small-overshoot {
-    animation: animate-float 8s cubic-bezier(.3,.89,.45,1.33) infinite;
-}
-
-.float-extra-long {
-    animation: animate-float-extra-long 40s cubic-bezier(.67,.45,.31,.57) infinite;
-}
-
-.float-fast {
-    animation: animate-float 4s cubic-bezier(.23,-0.02,.83,1.04) infinite;
-}
-
-.animation-delay-100{
-    animation-delay: 100ms;
-}
-
-.animation-delay-150{
-    animation-delay: 150ms;
-}
-
-.animation-delay-200{
-    animation-delay: 200ms;
-}
-
-.animation-delay-250{
-    animation-delay: 250ms;
-}
-
-.animation-delay-300{
-    animation-delay: 300ms;
-}
-
-.animation-delay-400{
-    animation-delay: 400ms;
-}
-
-.animation-delay-500{
-    animation-delay: 500ms;
-}
-
-.animation-delay-600{
-    animation-delay: 600ms;
-}
-
-.animation-delay-650{
-    animation-delay: 650ms;
-}
-
-.animation-delay-700{
-    animation-delay: 700ms;
-}
-
-.animation-delay-750{
-    animation-delay: 750ms;
-}
-
-.animation-delay-800{
-    animation-delay: 800ms;
-}
-
-.animation-delay-850{
-    animation-delay: 850ms;
 }
