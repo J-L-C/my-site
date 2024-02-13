@@ -4,7 +4,7 @@ export default function HeroSection({className}){
     return (<>
         <div className="flex flex-col justify-center mt-8 mb-16">
             <div className="mb-8">
-                <SectionHeading text="About Me"/>
+                <SectionHeading text="About This Dude"/>
             </div>
 
             <div className="justify-center items-center">
