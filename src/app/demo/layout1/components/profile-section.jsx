@@ -8,17 +8,16 @@ export default function ProfileSection({className}) {
     return (<>
         <div>
             <div className={"flex justify-center mt-8 mb-8"}>
-                <div>
+                <div className="mt-6">
                     <Image
-                        className={"shadow-lg rounded-lg mx- sm:w-52 sm:h-52 w-28 h-28"}
+                        className={"shadow-lg rounded-lg sm:w-52 sm:h-52 w-28 h-28"}
                         src={"/me.png"}
                         alt={"A picture of myself smiling into the camera"}
                         width={200}
                         height={200}
                     />
                     <div className={"ml-5 flex items-center"}>
-                        <Link href="https://www.google.com/search?q=Frisco%2C+TX">
-                            <div className={"inline-block mt-2"}>
+                        <Link className={"sm:inline-block hidden mt-2"} href="https://www.google.com/search?q=Frisco%2C+TX">
                                 <svg width="50px" height="50px" viewBox="0 0 1024 1024"
                                      xmlns="http://www.w3.org/2000/svg">
                                     <path fill="#000000"
@@ -26,25 +25,24 @@ export default function ProfileSection({className}) {
                                     <path fill="#000000"
                                           d="M512 512a96 96 0 1 0 0-192 96 96 0 0 0 0 192zm0 64a160 160 0 1 1 0-320 160 160 0 0 1 0 320z"/>
                                 </svg>
-                            </div>
                         </Link>
-                        <h3 className={"ml-3 pt-2 inline-block"}>
+                        <div className={"sm:ml-3 sm:pt-2 mt-4 mr-4 w-34"}>
                             Frisco, TX
-                        </h3>
+                        </div>
                     </div>
                 </div>
                 <div className={"flex flex-col ml-5 mt-5"}>
 
                     {/*name and title section*/}
                     <div>
-                        <h1>Jesse Cooper</h1>
-                        <h2>Software Engineer</h2>
+                        <h1 className={"sm:text-4xl text-2xl font-semibold text-white text-with-gradient"}>Jesse Cooper</h1>
+                        <h2 className={"sm:text-2xl text-lg text-gray-600"}>Software Engineer</h2>
                     </div>
 
                     {/*socials section*/}
                     <div>
-                        <GithubLink className={"w-18 h-18 inline-block"}/>
-                        <LinkedinLink className={"w-20 h-20 inline-block"} />
+                        <GithubLink className={"sm:w-18 sm:h-18 w-12 h-12 inline-block"}/>
+                        <LinkedinLink className={"w-18 h-18 inline-block"} />
                         {/*thinking of have a third link that opens a contact modal, directs them to a contact form, or something like that*/}
                     </div>
                 </div>

@@ -13,6 +13,8 @@ body {
     }
 }
 
+html {background-color: #ccdbe3
+}
 
 @layer base {
     h1 {
@@ -163,83 +165,14 @@ body {
     }
 }
 
-@keyframes falling-1 {
-    0% {
-        transform: translate3d(0, 0, 0)
-    }
 
-    100% {
-        transform: translate3d(-230px, 1040px, 0)
-    }
-}
-
-/*@keyframes random-x-position {*/
-/*    0% {*/
-/*        transform: translate3d(0, 0, 0)*/
-/*    }*/
-
-/*    100% {*/
-/*        transform: translate3d(var(--random-x) + "px", 0, 0)*/
-/*    }*/
-/*}*/
-
-@keyframes cube-rotation {
-    0% {
-        transform: rotate3d(1, 0, 0, 180deg)
-    }
-
-    100% {
-        transform: rotate3d(0, 0, 1, 180deg)
-    }
-}
-
-@keyframes gradient-animation {
-    0% {
-        color: #ff0000; /* Start color */
-    }
-    2% {
-        color: #00ff00; /* Middle color */
-    }
-    4% {
-        color: #0000ff; /* End color */
-    }
-
-    5% {
-        color: #0a0000; /* End color */
-    }
-}
-
-.gradient-animation {
-    animation: gradient-animation 10s infinite;
-}
 
 .spin {
     animation: spin 10s cubic-bezier(0.4, 0, 0.2, 1) infinite;
 }
 
-.cube-rotation {
-    animation: cube-rotation 10s cubic-bezier(0.4, 0, 0.2, 1) infinite;
-}
-
 .falling {
     animation: falling 16s cubic-bezier(0.4, 0, 0.2, 1) infinite;
-}
-
-.spin-fall {
-    animation: falling 20s infinite, spin 10s infinite;
-}
-
-.random-x-position {
-    animation: random-x-position 0s;
-}
-
-.paused {
-    animation-play-state: paused;
-}
-
-.text-outline {
-    -webkit-text-strokeWidth: 1px; /* Width of the outline */
-    -webkit-text-stroke-color: #ff0000; /* Color of the outline */
 }
 
 
@@ -249,6 +182,16 @@ body {
     }
     50% {
         transform: translateY(-50px);
+    }
+
+}
+
+@keyframes animate-float-extra-long {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-1050px);
     }
 
 }
@@ -269,6 +212,22 @@ body {
     4.25px 4.25px 0px #f00202,
     4.50px 4.50px 0px #fa0202,
     4.75px 4.75px 0px #ff0202;
+
+}
+
+.text-with-gradient {
+    text-shadow: 1px 1px 0px #23719f,
+    1.25px 1.25px 0px #3a7ba6,
+    1.75px 1.75px 0px #4c86ac,
+    2px 2px 0px #5e90b3,
+    2.25px 2.25px 0px #6e9bba,
+    2.5px 2.5px 0px #7ea6c0,
+    2.75px 2.75px 0px #8eb0c7,
+    3px 3px 0px #9ebbce,
+    3.25px 3.25px 0px #aec6d5,
+    3.50px 3.50px 0px #bed1dd,
+    3.75px 3.75px 0px #cedce4;
+    /*4.75px 4.75px 0px #ff0202;*/
 
 }
 
@@ -383,76 +342,78 @@ body {
     background-image: url("/texture.svg"), linear-gradient(to right, rgb(48, 84, 206) 0%, rgba(255, 254, 255, 0) 15%, rgba(180, 178, 225, 0) 85%, rgb(32, 75, 218) 100%);
 }
 
-.float {
-    animation: animate-float 7s cubic-bezier(.23,-0.02,.83,1.04) infinite;
+.float-slow {
+    animation: animate-float 12s cubic-bezier(.23,-0.02,.83,1.04) infinite;
 }
 
-.falling-delay-animation-100 {
-    animation: falling 20s cubic-bezier(0.4, 0, 0.2, 1);
+.float {
+    animation: animate-float 8s cubic-bezier(.23,-0.02,.83,1.04) infinite;
+}
+
+.float-large-overshoot {
+    animation: animate-float 7s cubic-bezier(.34,1.16,.42,2.12) infinite;
+}
+
+.float-small-overshoot {
+    animation: animate-float 8s cubic-bezier(.3,.89,.45,1.33) infinite;
+}
+
+.float-extra-long {
+    animation: animate-float-extra-long 40s cubic-bezier(.67,.45,.31,.57) infinite;
+}
+
+.float-fast {
+    animation: animate-float 4s cubic-bezier(.23,-0.02,.83,1.04) infinite;
+}
+
+.animation-delay-100{
     animation-delay: 100ms;
 }
 
-.falling-delay-animation-150 {
-    animation: falling 20s cubic-bezier(0.4, 0, 0.2, 1);
+.animation-delay-150{
     animation-delay: 150ms;
 }
 
-.falling-delay-animation-200 {
-    animation: falling-1 20s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+.animation-delay-200{
     animation-delay: 200ms;
 }
 
-.falling-delay-animation-250 {
-    animation: falling 20s cubic-bezier(0.4, 0, 0.2, 1);
+.animation-delay-250{
     animation-delay: 250ms;
 }
 
-.falling-delay-animation-300 {
-    animation: falling 20s cubic-bezier(0.4, 0, 0.2, 1);
+.animation-delay-300{
     animation-delay: 300ms;
 }
 
-.falling-delay-animation-350 {
-    animation: falling 20s cubic-bezier(0.4, 0, 0.2, 1);
-    animation-delay: 350ms;
-}
-
-.falling-delay-animation-400 {
-    animation: falling 20s cubic-bezier(0.4, 0, 0.2, 1);
+.animation-delay-400{
     animation-delay: 400ms;
 }
 
-.falling-delay-animation-450 {
-    animation: falling 20s cubic-bezier(0.4, 0, 0.2, 1);
-    animation-delay: 450ms;
-}
-
-.falling-delay-animation-500 {
-    animation: falling 20s cubic-bezier(0.4, 0, 0.2, 1);
+.animation-delay-500{
     animation-delay: 500ms;
 }
 
-.falling-delay-animation-550 {
-    animation: falling 20s cubic-bezier(0.4, 0, 0.2, 1);
-    animation-delay: 550ms;
-}
-
-.falling-delay-animation-600 {
-    animation: falling 20s cubic-bezier(0.4, 0, 0.2, 1);
+.animation-delay-600{
     animation-delay: 600ms;
 }
 
-.falling-delay-animation-650 {
-    animation: falling 20s cubic-bezier(0.4, 0, 0.2, 1);
+.animation-delay-650{
     animation-delay: 650ms;
 }
 
-.falling-delay-animation-700 {
-    animation: falling 20s cubic-bezier(0.4, 0, 0.2, 1);
+.animation-delay-700{
     animation-delay: 700ms;
 }
 
-.falling-delay-animation-750 {
-    animation: falling 20s cubic-bezier(0.4, 0, 0.2, 1);
+.animation-delay-750{
     animation-delay: 750ms;
+}
+
+.animation-delay-800{
+    animation-delay: 800ms;
+}
+
+.animation-delay-850{
+    animation-delay: 850ms;
 }

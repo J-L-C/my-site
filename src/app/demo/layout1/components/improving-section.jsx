@@ -27,15 +27,15 @@ export default function ImprovingSection({className}) {
 
     return (<>
         <div className="mt-16">
-            <div className="w-64 mx-[23%]">
+            <div className="sm:mx-[23%] mx-[16%]">
                 <ImprovingLogo
                     click={onClick}
-                    className="mb-12"
+                    className="mb-12 sm:w-96 w-64"
                     width="400"
                     height="150"
                 />
             </div>
-            <div className="text-white p-8 text-justify bg-red-600">
+            <div className="text-white p-8 text-justify bg-[#0e74cd] ">
                 <div className="text-center -mt-4 mb-4 text-gray-300 text-sm">[ 03/2021 - 02/2023 ]</div>
                 <p>
                     Encouraged to try something new, I join Object Partners (Later bought by Improving). I started
@@ -44,8 +44,8 @@ export default function ImprovingSection({className}) {
                     architects
                     within the company to upgrade and update their platform to be able to deploy their application as a
                     Native Image, something that was being cooked up over at Oracle. I also spent time building out
-                    parts of their application to help facilitate data dumps and getting that data from a testing center
-                    to an internal developer when issues arose.
+                    parts of their application to facilitate data dumps and getting that data from a testing center
+                    to an internal developer who could use that snapshot to triage any defects found in production.
                 </p>
                 <div className="mt-8 text-center">
                     <h3 className="font-extrabold mb-4">Tech / Skills</h3>

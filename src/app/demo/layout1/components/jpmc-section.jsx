@@ -23,15 +23,15 @@ export default function JpmcSection({className}) {
 
     return (<>
         <div className="mt-16">
-            <div className="sm:mx-[20%] mx-[35%]">
+            <div className="sm:mx-[20%] mx-[20%]">
                 <JpmcLogo
                     click={onClick}
-                    className="sm:w-96 w-32 stride mt-4"
+                    className="sm:w-96 w-52 mt-4"
                     width="400"
                     height="150"
                 />
             </div>
-            <div className="text-white p-8 text-justify bg-blue-900">
+            <div className="text-white p-8 text-justify bg-[#0d6ec9]">
                 <div className="text-center -mt-4 mb-4 text-gray-300 text-sm">[ 04/2020 - 03/2021 ]</div>
                 <p>
                     My first exposure to the world of finance, J.P. Morgan Chase, excited me! I have been interested
@@ -42,8 +42,7 @@ export default function JpmcSection({className}) {
                     use. This web app is used to onboard new clients with different kinds of product offerings and I
                     built
                     the services that aggregated security data from disparate sources to provide this critical
-                    information
-                    to the front end.
+                    information.
                 </p>
                 <div className="mt-8 text-center">
                     <h3 className="font-extrabold mb-4">Tech / Skills</h3>

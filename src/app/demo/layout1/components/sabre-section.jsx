@@ -27,15 +27,15 @@ export default function SabreSection({className}) {
 
     return (<>
         <div className="mt-16">
-            <div className="sm:mx-[23%] mx-[35%]">
+            <div className="sm:mx-[23%] mx-[20%]">
                 <SabreLogo
                     onClick={onClick}
-                    className="sm:w-96 w-32 stride mt-4"
+                    className="sm:w-96 w-72 mt-4"
                     width="400"
                     height="150"
                 />
             </div>
-            <div className="text-white p-8 text-justify bg-fuchsia-600">
+            <div className="text-white p-8 text-justify bg-[#0752ba]">
                 <div className="text-center -mt-4 mb-4 text-gray-300 text-sm">[ 10/2014 - 07/2017 ]</div>
                 <p>
                     It was here that I began to build my technical skills. Though I enjoyed the work of a Business

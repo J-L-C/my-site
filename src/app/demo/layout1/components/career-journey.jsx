@@ -6,17 +6,13 @@ import AllstateSection from "@/app/demo/layout1/components/allstate-section";
 import SabreSection from "@/app/demo/layout1/components/sabre-section";
 import SantanderSection from "@/app/demo/layout1/components/santander-section";
 import AaSection from "@/app/demo/layout1/components/aa-section";
+import SectionHeading from "@/app/demo/layout1/components/section-heading";
 
 export default function CareerJourney({className}) {
 
     return(<>
         <div className={className}>
-            <h1 className="flex justify-center items-center flex-initial
-                                h-20 text-white bg-[#ff0000] mx-[-2%] pt-2
-                                my-[3%] text-with-red-shadow-no-gradient-very-long font-bold rounded
-                                text-7xl
-                                "
-            >Career Journey</h1>
+            <SectionHeading text="Career Journey"/>
             <div>
 
                 <StrideSection/>

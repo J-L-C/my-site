@@ -22,47 +22,38 @@ export default function SabreLogo({id = "sabreLogo",width, height, className, on
 
                 </path>
 
-                {/*<path*/}
-                {/*    opacity="0"*/}
-                {/*    fill="#e50000"*/}
-                {/*    d="m 92.37375,20.983012 0.19375,0 c 0.2225,0 0.41125,-0.0812 0.41125,-0.28875 0,-0.1475 -0.11,-0.29625 -0.41125,-0.29625 -0.0875,0 -0.1475,0.007 -0.19375,0.015 l 0,0.57 z m 0,0.9325 -0.26875,0 0,-1.68375 c 0.14125,-0.0212 0.27375,-0.04 0.47625,-0.04 0.255,0 0.4225,0.0525 0.525,0.1275 0.0987,0.0725 0.1525,0.1875 0.1525,0.3475 0,0.22125 -0.1475,0.35625 -0.32875,0.41 l 0,0.0138 c 0.1475,0.0263 0.24875,0.16 0.2825,0.40875 0.04,0.2625 0.0813,0.3625 0.1075,0.41625 l -0.2825,0 c -0.0412,-0.0537 -0.0813,-0.20875 -0.11375,-0.43 -0.04,-0.215 -0.14875,-0.295 -0.3625,-0.295 l -0.1875,0 0,0.725 z m 0.28125,-2.15375 c -0.665,0 -1.2075,0.57 -1.2075,1.27375 0,0.71875 0.5425,1.28375 1.21375,1.28375 0.67125,0.006 1.2075,-0.565 1.2075,-1.27625 0,-0.71125 -0.53625,-1.28125 -1.2075,-1.28125 l -0.006,0 z m 0.006,-0.235 c 0.82625,0 1.48375,0.67125 1.48375,1.50875 0,0.8525 -0.6575,1.51875 -1.49,1.51875 -0.825,0 -1.49625,-0.66625 -1.49625,-1.51875 0,-0.8375 0.67125,-1.50875 1.49625,-1.50875 l 0.006,0 z"*/}
-                {/*    id="path4036"*/}
-                {/*>*/}
-                {/*    <animate id="appear-symbol" attributeName="opacity" values="0;1" dur="1s" begin="4s" fill="freeze"/>*/}
-                {/*</path>*/}
-
                 <defs>
                     <linearGradient
                         id="color-wave">
                         <stop offset="0%" stopColor="#e50000" stopOpacity="1">
-                            <animate attributeName="offset" values="-1.15;1" dur="4s" fill="freeze"/>
+                            <animate attributeName="offset" values="-1.15;1" dur="2.75s" fill="freeze"/>
                         </stop>
                         <stop offset="15%" stopColor="#e50000" stopOpacity="1">
-                            <animate attributeName="offset" values="-1;1" dur="4s"/>
+                            <animate attributeName="offset" values="-1;1" dur="2.75s"/>
                         </stop>
                         <stop offset="15%" stopColor="#ffff66" stopOpacity="1">
-                            <animate attributeName="offset" values="-1;1" dur="4s"/>
+                            <animate attributeName="offset" values="-1;1" dur="2.75s"/>
                         </stop>
                         <stop offset="25%" stopColor="#ffff66" stopOpacity="1">
-                            <animate attributeName="offset" values="-0.85;1.15" dur="4s"/>
+                            <animate attributeName="offset" values="-0.85;1.15" dur="2.75s"/>
                         </stop>
                         <stop offset="55%" stopColor="#66ff99" stopOpacity="1">
-                            <animate attributeName="offset" values="-0.85;1.15" dur="4s"/>
+                            <animate attributeName="offset" values="-0.85;1.15" dur="2.75s"/>
                         </stop>
                         <stop offset="65%" stopColor="#66ff99" stopOpacity="1">
-                            <animate attributeName="offset" values="-0.75;1.25" dur="4s"/>
+                            <animate attributeName="offset" values="-0.75;1.25" dur="2.75s"/>
                         </stop>
                         <stop offset="65%" stopColor="#3366ff" stopOpacity="1">
-                            <animate attributeName="offset" values="-0.75;1.25" dur="4s"/>
+                            <animate attributeName="offset" values="-0.75;1.25" dur="2.75s"/>
                         </stop>
                         <stop offset="75%" stopColor="#3366ff" stopOpacity="1">
-                            <animate attributeName="offset" values="-0.65;1.35" dur="4s"/>
+                            <animate attributeName="offset" values="-0.65;1.35" dur="2.75s"/>
                         </stop>
                         <stop offset="65%" stopColor="#ff0066" stopOpacity="1">
-                            <animate attributeName="offset" values="-0.65;1.55" dur="4s"/>
+                            <animate attributeName="offset" values="-0.65;1.55" dur="2.75s"/>
                         </stop>
                         <stop offset="75%" stopColor="#ff0066" stopOpacity="1">
-                            <animate attributeName="offset" values="-0.45;1.55" dur="4s"/>
+                            <animate attributeName="offset" values="-0.45;1.55" dur="2.75s"/>
                         </stop>
                         <stop offset="0%" stopColor="#e50000" stopOpacity="0">
                             {/*<animate attributeName="offset" values="0;1" dur="4s"/>*/}

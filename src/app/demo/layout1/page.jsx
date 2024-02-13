@@ -9,6 +9,7 @@ import {convertTimeToNumber} from "@/app/demo/layout1/utils/convert";
 import BlockWithStripes from "@/app/demo/layout1/shapes/block-with-stripes";
 import YoutubeLink from "@/app/demo/layout1/components/links/youtube-link";
 import GithubLink from "@/app/demo/layout1/components/links/github-link";
+import SectionHeading from "@/app/demo/layout1/components/section-heading";
 
 export default function Layout1() {
 
@@ -30,7 +31,8 @@ export default function Layout1() {
     let allstateLogoTriggered = false;
     let sabreLogoTriggered = false;
     let santanderLogoTriggered = false;
-    let colorWheel = ["blue", "red", "pink", "blue", "black"]
+
+    const rightOffset = 100;
 
     const triggerAnimation = (element) => {
 
@@ -71,6 +73,7 @@ export default function Layout1() {
     const triggerAnimationInView = () => {
         if (isInViewport(strideLogo) && !strideLogoTriggered) {
             // triggerAnimation(strideLogo)
+            console.log('stride triggered')
             strideLogoTriggered = true;
         }
         if (isInViewport(improvingLogo) && !improvingLogoTriggered) {
@@ -88,6 +91,7 @@ export default function Layout1() {
             aaLogoTriggered = true;
         }
         if (isInViewport(cognizantLogo) && !cognizantLogoTriggered) {
+            console.log('cognizant triggered')
             triggerAnimation(cognizantLogo)
             cognizantLogo.setAttribute("opacity", 1)
             cognizantLogoTriggered = true;
@@ -133,175 +137,175 @@ export default function Layout1() {
             rect.top >= 0 &&
             rect.left >= 0 &&
             rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+            rect.right <= (window.innerWidth + rightOffset || document.documentElement.clientWidth + rightOffset)
         );
     }
 
 
     return (
         <div className="parallax__viewport">
-            <div className={"absolute layer3"}>
+            <div className={"relative layer3"}>
                 <div className={"rotate-180 bottom-0"}>
 
                     <div className="">
 
-                        <div className="float">
-                            <BlockWithStripes fill="blue"
-                                              className={"fixed huge -right-[400px] -top-[5400px] rotate-[187deg]"}/>
+                        <div className="animation-delay-100 float-slow">
+                            <BlockWithStripes fill="#00DFA2"
+                                              className={"absolute huge -right-[400px] -top-[5400px] rotate-[187deg]"}/>
                         </div>
-                        <div className="float">
-                            <BlockWithStripes fill="blue"
-                                              className={"fixed medium -right-[500px] -top-[5800px] -rotate-[197deg]"}/>
+                        <div className="animation-delay-300 float-fast">
+                            <BlockWithStripes fill="#FF0060"
+                                              className={"absolute medium -right-[500px] -top-[5800px] -rotate-[197deg]"}/>
                         </div>
-                        <div className="float">
-                            <BlockWithStripes fill="blue"
-                                              className={"fixed large right-[800px] -top-[5300px] rotate-[197deg]"}/>
+                        <div className="animation-delay-500 float-small-overshoot">
+                            <BlockWithStripes fill="#F6FA70"
+                                              className={"absolute large right-[800px] -top-[5300px] rotate-[197deg]"}/>
                         </div>
-                        <div className="float">
-                            <BlockWithStripes fill="blue"
-                                              className={"fixed x-large -right-[800px] -top-[5800px] rotate-[197deg]"}/>
+                        <div className="animation-delay-700 float-large-overshoot">
+                            <BlockWithStripes fill="#FF0060"
+                                              className={"absolute x-large -right-[800px] -top-[5800px] rotate-[197deg]"}/>
                         </div>
-                        <div className="float">
-                            <BlockWithStripes fill="blue"
-                                              className={"fixed x2-large right-[1100px] -top-[6700px] rotate-[197deg]"}/>
+                        <div className="animation-delay-150 float-small-overshoot">
+                            <BlockWithStripes fill="#00DFA2"
+                                              className={"absolute x2-large right-[1100px] -top-[6700px] rotate-[197deg]"}/>
                         </div>
-                        <div className="float">
-                            <BlockWithStripes fill="blue"
-                                              className={"fixed small right-[1100px] -top-[5300px] rotate-[97deg]"}/>
+                        <div className="animation-delay-850 float-fast">
+                            <BlockWithStripes fill="#FF0060"
+                                              className={"absolute small right-[1100px] -top-[5300px] rotate-[97deg]"}/>
                         </div>
-                        <div className="float">
-                            <BlockWithStripes fill="blue"
-                                              className={"fixed massive right-[1190px] -top-[5700px] rotate-[97deg]"}/>
+                        <div className="animation-delay-700 float">
+                            <BlockWithStripes fill="#F6FA70"
+                                              className={"absolute massive right-[1190px] -top-[5700px] rotate-[97deg]"}/>
                         </div>
-                        <div className="float">
-                            <BlockWithStripes fill="blue"
-                                              className={"fixed large -right-[100px] -top-[6300px] rotate-[297deg]"}/>
+                        <div className="animation-delay-750 float-small-overshoot">
+                            <BlockWithStripes fill="#FF0060"
+                                              className={"absolute large -right-[100px] -top-[6300px] rotate-[297deg]"}/>
                         </div>
-                        <div className="float">
-                            <BlockWithStripes fill="blue"
-                                              className={"fixed x-large -right-[100px] -top-[5800px] rotate-[137deg]"}/>
+                        <div className="animation-delay-650 float">
+                            <BlockWithStripes fill="#00DFA2"
+                                              className={"absolute x-large -right-[100px] -top-[5800px] rotate-[137deg]"}/>
                         </div>
-                        <div className="float">
-                            <BlockWithStripes fill="blue"
-                                              className={"fixed x-huge right-[1760px] -top-[5100px] -rotate-[43deg]"}/>
+                        <div className="animation-delay-500 float-slow">
+                            <BlockWithStripes fill="#FF0060"
+                                              className={"absolute x-huge right-[1760px] -top-[5100px] -rotate-[43deg]"}/>
                         </div>
-                        <div className="float">
-                            <BlockWithStripes fill="blue"
-                                              className={"fixed  large right-[1200px] -top-[4800px] rotate-[357deg]"}/>
+                        <div className="animation-delay-250 float-large-overshoot">
+                            <BlockWithStripes fill="#F6FA70"
+                                              className={"absolute  large right-[1200px] -top-[4800px] rotate-[357deg]"}/>
                         </div>
-                        <div className="float">
-                            <BlockWithStripes fill="blue"
-                                              className={"fixed  medium right-[60px] -top-[4500px] -rotate-[105deg]"}/>
+                        <div className="animation-delay-200 float-fast">
+                            <BlockWithStripes fill="#FF0060"
+                                              className={"absolute  medium right-[60px] -top-[4500px] -rotate-[105deg]"}/>
                         </div>
 
 
-                        <div className="float">
-                            <BlockWithStripes fill="blue"
-                                              className={"fixed huge right-[60px] -top-[4200px] rotate-[113deg]"}/>
+                        <div className="animation-delay-250 float-slow">
+                            <BlockWithStripes fill="#00DFA2"
+                                              className={"absolute huge right-[60px] -top-[4200px] rotate-[113deg]"}/>
                         </div>
-                        <div className="float">
-                            <BlockWithStripes fill="blue"
-                                              className={"fixed huge right-[1560px] -top-[4000px] -rotate-[176deg]"}/>
+                        <div className="animation-delay-400 float-slow">
+                            <BlockWithStripes fill="#FF0060"
+                                              className={"absolute huge right-[1560px] -top-[4000px] -rotate-[176deg]"}/>
                         </div>
-                        <div className="float">
-                            <BlockWithStripes fill="blue"
-                                              className={"fixed x-large right-[160px] -top-[3600px] -rotate-[80deg]"}/>
+                        <div className="animation-delay-500 float-small-overshoot">
+                            <BlockWithStripes fill="#F6FA70"
+                                              className={"absolute x-large right-[160px] -top-[3600px] -rotate-[80deg]"}/>
                         </div>
-                        <div className="float">
-                            <BlockWithStripes fill="blue"
-                                              className={"fixed large right-[1343px] -top-[3290px] -rotate-[188deg]"}/>
+                        <div className="animation-delay-650 float">
+                            <BlockWithStripes fill="#FF0060"
+                                              className={"absolute large right-[1343px] -top-[3290px] -rotate-[188deg]"}/>
                         </div>
-                        <div className="float">
-                            <BlockWithStripes fill="blue"
-                                              className={"fixed medium right-[399px] -top-[2900px] rotate-[37deg]"}/>
+                        <div className="animation-delay-750 float-fast">
+                            <BlockWithStripes fill="#00DFA2"
+                                              className={"absolute medium right-[399px] -top-[2900px] rotate-[37deg]"}/>
                         </div>
-                        <div className="float">
-                            <BlockWithStripes fill="blue"
-                                              className={"fixed  large right-[1199px] -top-[2630px] -rotate-[172deg]"}/>
+                        <div className="animation-delay-850 float">
+                            <BlockWithStripes fill="#FF0060"
+                                              className={"absolute  large right-[1199px] -top-[2630px] -rotate-[172deg]"}/>
                         </div>
-                        <div className="float">
-                            <BlockWithStripes fill="blue"
-                                              className={"fixed  large right-[1588px] -top-[2439px] rotate-[146deg]"}/>
+                        <div className="animation-delay-600 float-small-overshoot">
+                            <BlockWithStripes fill="#F6FA70"
+                                              className={"absolute  large right-[1588px] -top-[2439px] rotate-[146deg]"}/>
                         </div>
-                        <div className="float">
-                            <BlockWithStripes fill="blue"
-                                              className={" fixed  large right-[66px] -top-[2100px] -rotate-[123deg]"}/>
+                        <div className="animation-delay-300 float">
+                            <BlockWithStripes fill="#FF0060"
+                                              className={" absolute  large right-[66px] -top-[2100px] -rotate-[123deg]"}/>
                         </div>
-                        <div className="float">
-                            <BlockWithStripes fill="blue"
-                                              className={"fixed  x-large right-[666px] -top-[1500px] rotate-[111deg]"}/>
+                        <div className="animation-delay-650 float-large-overshoot">
+                            <BlockWithStripes fill="#FF0060"
+                                              className={"absolute  x-large right-[666px] -top-[1500px] rotate-[111deg]"}/>
                         </div>
-                        <div className="float">
-                            <BlockWithStripes fill="blue"
-                                              className={"fixed  large right-[999px] -top-[1500px] -rotate-[89deg]"}/>
+                        <div className="animation-delay-100 float">
+                            <BlockWithStripes fill="#00DFA2"
+                                              className={"absolute  large right-[999px] -top-[1500px] -rotate-[89deg]"}/>
                         </div>
-                        <div className="float">
-                            <BlockWithStripes fill="blue"
-                                              className={"fixed  medium right-[666px] -top-[1200px] rotate-[352deg]"}/>
+                        <div className="animation-delay-150 float-fast">
+                            <BlockWithStripes fill="#FF0060"
+                                              className={"absolute  medium right-[666px] -top-[1200px] rotate-[352deg]"}/>
                         </div>
-                        <div className="float">
-                            <BlockWithStripes fill="blue"
-                                              className={"fixed  large right-[535px] -top-[900px] -rotate-[115deg]"}/>
+                        <div className="animation-delay-200 float">
+                            <BlockWithStripes fill="#F6FA70"
+                                              className={"absolute  large right-[535px] -top-[900px] -rotate-[115deg]"}/>
                         </div>
-                        <div className="float">
-                            <BlockWithStripes fill="blue"
-                                              className={"fixed  large right-[1235px] -top-[3900px] rotate-[190deg]"}/>
+                        <div className="animation-delay-250 float-small-overshoot">
+                            <BlockWithStripes fill="#FF0060"
+                                              className={"absolute  large right-[1235px] -top-[3900px] rotate-[190deg]"}/>
                         </div>
-                        <div className="float">
-                            <BlockWithStripes fill="blue"
-                                              className={"fixed  huge right-[710px] -top-[2900px] -rotate-[142deg]"}/>
+                        <div className="animation-delay-850 float-slow">
+                            <BlockWithStripes fill="#00DFA2"
+                                              className={"absolute  huge right-[710px] -top-[2900px] -rotate-[142deg]"}/>
                         </div>
-                        <div className="float">
-                            <BlockWithStripes fill="blue"
-                                              className={"fixed  large right-[1060px] -top-[2900px] -rotate-[119deg]"}/>
+                        <div className="animation-delay-700 float-extra-long">
+                            <BlockWithStripes fill="#FF0060"
+                                              className={"absolute  large right-[1060px] -top-[2900px] -rotate-[119deg]"}/>
                         </div>
-                        <div className="float">
-                            <BlockWithStripes fill="blue"
-                                              className={"fixed large -right-[460px] -top-[3000px] -rotate-[162deg]"}/>
+                        <div className="animation-delay-50 float-extra-long">
+                            <BlockWithStripes fill="#F6FA70"
+                                              className={"absolute large -right-[460px] -top-[3000px] -rotate-[162deg]"}/>
                         </div>
-                        <div className="float">
-                            <BlockWithStripes fill="blue"
-                                              className={"fixed  small right-[1760px] -top-[2600px] -rotate-[162deg]"}/>
+                        <div className="animation-delay-400 float-fast">
+                            <BlockWithStripes fill="#FF0060"
+                                              className={"absolute  small right-[1760px] -top-[2600px] -rotate-[162deg]"}/>
                         </div>
-                        <div className="float">
-                            <BlockWithStripes fill="blue"
-                                              className={"fixed  x2-large right-[1560px] -top-[2200px] -rotate-[142deg]"}/>
+                        <div className="animation-delay-300 float-small-overshoot">
+                            <BlockWithStripes fill="#00DFA2"
+                                              className={"absolute  x2-large right-[1560px] -top-[2200px] -rotate-[142deg]"}/>
                         </div>
-                        <div className="float">
-                            <BlockWithStripes fill="blue"
-                                              className={"fixed  medium right-[460px] -top-[1900px] rotate-[1deg]"}/>
+                        <div className="animation-delay-200 float-fast">
+                            <BlockWithStripes fill="#FF0060"
+                                              className={"absolute  medium right-[460px] -top-[1900px] rotate-[1deg]"}/>
                         </div>
-                        <div className="float">
-                            <BlockWithStripes fill="blue"
-                                              className={"fixed large right-[360px] -top-[900px] -rotate-[3deg]"}/>
+                        <div className="animation-delay-250 float-large-overshoot">
+                            <BlockWithStripes fill="#F6FA70"
+                                              className={"absolute large right-[360px] -top-[900px] -rotate-[3deg]"}/>
                         </div>
-                        <div className="float">
-                            <BlockWithStripes fill="blue"
-                                              className={"fixed  x-huge -right-[40px] -top-[400px] rotate-[338deg]"}/>
+                        <div className="animation-delay-100 float-slow">
+                            <BlockWithStripes fill="#FF0060"
+                                              className={"absolute  x-huge -right-[40px] -top-[400px] rotate-[338deg]"}/>
                         </div>
-                        <div className="float">
-                            <BlockWithStripes fill="blue"
-                                              className={"fixed  medium right-[860px] -top-[300px] -rotate-[251deg]"}/>
+                        <div className="animation-delay-150 float-fast">
+                            <BlockWithStripes fill="#00DFA2"
+                                              className={"absolute  medium right-[860px] -top-[300px] -rotate-[251deg]"}/>
                         </div>
-                        <div className="float">
-                            <BlockWithStripes fill="blue"
-                                              className={"fixed  x-large right-[1370px] -top-[202px] rotate-[171deg]"}/>
+                        <div className="animation-delay-250 float-small-overshoot">
+                            <BlockWithStripes fill="#FF0060"
+                                              className={"absolute  x-large right-[1370px] -top-[202px] rotate-[171deg]"}/>
                         </div>
-                        <div className="float">
-                            <BlockWithStripes fill="blue"
-                                              className={"fixed  x2-large right-[890px]  -top-[180px] -rotate-[94deg]"}/>
+                        <div className="animation-delay-400 float-small-overshoot">
+                            <BlockWithStripes fill="#F6FA70"
+                                              className={"absolute  x2-large right-[890px]  -top-[180px] -rotate-[94deg]"}/>
                         </div>
-                        <div className="float">
-                            <BlockWithStripes fill="blue"
-                                              className={"fixed  large right-[1060px] -top-[400px] rotate-[90deg]"}/>
+                        <div className="animation-delay-300 float-large-overshoot">
+                            <BlockWithStripes fill="#FF0060"
+                                              className={"absolute  large right-[1060px] -top-[400px] rotate-[90deg]"}/>
                         </div>
-                        <div className="float">
-                            <BlockWithStripes fill="blue"
-                                              className={"fixed  large right-[1567px] -top-[90px] -rotate-[49deg]"}/>
+                        <div className="animation-delay-100 float-large-overshoot">
+                            <BlockWithStripes fill="#00DFA2"
+                                              className={"absolute  large right-[1567px] -top-[90px] -rotate-[49deg]"}/>
                         </div>
-                        <div className="float">
-                            <BlockWithStripes fill="blue"
-                                              className={"fixed  large -right-[546px] -top-[1800px] rotate-[111deg]"}/>
+                        <div className="animation-delay-250 float-small-overshoot">
+                            <BlockWithStripes fill="#FF0060"
+                                              className={"absolute  large -right-[546px] -top-[1800px] rotate-[111deg]"}/>
                         </div>
 
                     </div>
@@ -309,133 +313,122 @@ export default function Layout1() {
                 </div>
             </div>
 
-            {/*to solve the issue of my layers uncentering, I can hack together a solution to just move the whole layer*/}
-            {/*at breakpoints. Not the best but hey it should work*/}
-            {/*I might be able to calculate the top position of the layer and then adjust accordingly with javascript*/}
-
-            {/*another thought, how about whenever the screen is expanded or adjusted, there is an animation added that translates */}
-            {/*each block back to where it should be lol*/}
-            <div className={"w-0 h-0 layer2"}>
-                <div className={""}>
+            <div className={"w-0 h-0 relative layer2"}>
 
                     <div className="">
 
-                        <div className="float">
-                            <BlockWithStripes fill="red"
-                                              className={"fixed x-large -right-[160px] top-[5800px] rotate-[197deg]"}/>
+                        <div className="animation-delay-250 float-small-overshoot">
+                            <BlockWithStripes fill="#0079FF"
+                                              className={"absolute x-large -right-[160px] top-[5800px] rotate-[197deg]"}/>
                         </div>
-                        <div className="float">
-                            <BlockWithStripes fill="red"
-                                              className={"fixed x-large -right-[1760px] top-[5100px] -rotate-[43deg]"}/>
+                        <div className="animation-delay-300 float-large-overshoot">
+                            <BlockWithStripes fill="#F6FA70"
+                                              className={"absolute x-large -right-[1760px] top-[5100px] -rotate-[43deg]"}/>
                         </div>
-                        <div className="float">
-                            <BlockWithStripes fill="red"
-                                              className={"fixed  x-large -right-[1200px] top-[4800px] rotate-[357deg]"}/>
+                        <div className="animation-delay-500 float">
+                            <BlockWithStripes fill="#FF0060"
+                                              className={"absolute  x-large -right-[1200px] top-[4800px] rotate-[357deg]"}/>
                         </div>
-                        <div className="float">
-                            <BlockWithStripes fill="red"
-                                              className={"fixed  large -right-[60px] top-[4500px] -rotate-[105deg]"}/>
+                        <div className="animation-delay-600 float-small-overshoot">
+                            <BlockWithStripes fill="#0079FF"
+                                              className={"absolute  large -right-[60px] top-[4500px] -rotate-[105deg]"}/>
                         </div>
 
 
-                        <div className="float">
-                            <BlockWithStripes fill="red"
-                                              className={"fixed  x2-large -right-[60px] top-[4200px] rotate-[28deg]"}/>
+                        <div className="animation-delay-850 float">
+                            <BlockWithStripes fill="#00DFA2"
+                                              className={"absolute  x2-large -right-[60px] top-[4200px] rotate-[28deg]"}/>
                         </div>
-                        <div className="float">
-                            <BlockWithStripes fill="red"
-                                              className={"fixed  x-large -right-[1660px] top-[4000px] -rotate-[146deg]"}/>
+                        <div className="animation-delay-300 float-extra-long">
+                            <BlockWithStripes fill="#F6FA70"
+                                              className={"absolute  x-large -right-[1660px] top-[4000px] -rotate-[146deg]"}/>
                         </div>
-                        <div className="float">
-                            <BlockWithStripes fill="red"
-                                              className={"fixed  large -right-[1360px] top-[3600px] -rotate-[80deg]"}/>
+                        <div className="animation-delay-400 float-large-overshoot">
+                            <BlockWithStripes fill="#0079FF"
+                                              className={"absolute  large -right-[1360px] top-[3600px] -rotate-[80deg]"}/>
                         </div>
-                        <div className="float">
-                            <BlockWithStripes fill="red"
-                                              className={"fixed  large -right-[843px] top-[3290px] -rotate-[188deg]"}/>
+                        <div className="animation-delay-500 float-extra-long">
+                            <BlockWithStripes fill="#00DFA2"
+                                              className={"absolute  large -right-[843px] top-[3290px] -rotate-[188deg]"}/>
                         </div>
-                        <div className="float">
-                            <BlockWithStripes fill="red"
-                                              className={"fixed  huge -right-[119px] top-[2900px] rotate-[107deg]"}/>
+                        <div className="animation-delay-800 float-slow">
+                            <BlockWithStripes fill="#FF0060"
+                                              className={"absolute  huge -right-[119px] top-[2900px] rotate-[107deg]"}/>
                         </div>
-                        <div className="float">
-                            <BlockWithStripes fill="red"
-                                              className={"fixed  x-large -right-[1229px] top-[2630px] -rotate-[166deg]"}/>
+                        <div className="animation-delay-500 float-extra-long">
+                            <BlockWithStripes fill="#F6FA70"
+                                              className={"absolute  x-large -right-[1229px] top-[2630px] -rotate-[166deg]"}/>
                         </div>
-                        <div className="float">
-                            <BlockWithStripes fill="red"
-                                              className={"fixed  large -right-[688px] top-[2439px] rotate-[306deg]"}/>
+                        <div className="animation-delay-800 float-small-overshoot">
+                            <BlockWithStripes fill="#0079FF"
+                                              className={"absolute  large -right-[688px] top-[2439px] rotate-[306deg]"}/>
                         </div>
-                        <div className="float">
-                            <BlockWithStripes fill="red"
-                                              className={" fixed  large -right-[166px] top-[2100px] -rotate-[195deg]"}/>
+                        <div className="animation-delay-400 float-large-overshoot">
+                            <BlockWithStripes fill="#00DFA2"
+                                              className={" absolute  large -right-[166px] top-[2100px] -rotate-[195deg]"}/>
                         </div>
-                        <div className="float">
-                            <BlockWithStripes fill="red"
-                                              className={"fixed  large -right-[546px] top-[1800px] rotate-[211deg]"}/>
+                        <div className="animation-delay-800 float-extra-long">
+                            <BlockWithStripes fill="#FF0060"
+                                              className={"absolute  large -right-[546px] top-[1800px] rotate-[211deg]"}/>
                         </div>
-                        <div className="float">
-                            <BlockWithStripes fill="red"
-                                              className={"fixed  large -right-[999px] top-[1200px] -rotate-[89deg]"}/>
+                        <div className="animation-delay-300 float-small-overshoot">
+                            <BlockWithStripes fill="#F6FA70"
+                                              className={"absolute  large -right-[999px] top-[1200px] -rotate-[89deg]"}/>
                         </div>
-                        <div className="float">
-                            <BlockWithStripes fill="red"
-                                              className={"fixed  x2-large -right-[1649px] top-[1400px] -rotate-[199deg]"}/>
+                        <div className="animation-delay-200 float">
+                            <BlockWithStripes fill="#0079FF"
+                                              className={"absolute  x2-large -right-[1649px] top-[1400px] -rotate-[199deg]"}/>
                         </div>
-                        <div className="float">
-                            <BlockWithStripes fill="red"
-                                              className={"fixed  large -right-[666px]  top-[1200px] rotate-[352deg]"}/>
+                        <div className="animation-delay-100 float-extra-long">
+                            <BlockWithStripes fill="#FF0060"
+                                              className={"absolute  large -right-[666px]  top-[1200px] rotate-[352deg]"}/>
                         </div>
-                        <div className="float">
-                            <BlockWithStripes fill="red"
-                                              className={"fixed  large -right-[555px]  top-[900px] -rotate-[115deg]"}/>
+                        <div className="animation-delay-250 float">
+                            <BlockWithStripes fill="#F6FA70"
+                                              className={"absolute  large -right-[555px]  top-[900px] -rotate-[115deg]"}/>
                         </div>
-                        <div className="float">
-                            <BlockWithStripes fill="red"
-                                              className={"fixed  large -right-[1435px]  top-[3900px] rotate-[190deg]"}/>
+                        <div className="animation-delay-300 float-small-overshoot">
+                            <BlockWithStripes fill="#00DFA2"
+                                              className={"absolute  large -right-[1435px]  top-[3900px] rotate-[190deg]"}/>
                         </div>
-                        <div className="float">
-                            <BlockWithStripes fill="red"
-                                              className={"fixed  x3-huge -right-[1599px]  top-[2900px] -rotate-[142deg]"}/>
+                        <div className="animation-delay-100 float-slow">
+                            <BlockWithStripes fill="#0079FF"
+                                              className={"absolute  x3-huge -right-[1599px]  top-[2900px] -rotate-[142deg]"}/>
                         </div>
-                        <div className="float">
-                            <BlockWithStripes fill="red"
-                                              className={"fixed  large -right-[360px]  top-[1900px] rotate-[1deg]"}/>
+                        <div className="animation-delay-400 float">
+                            <BlockWithStripes fill="#00DFA2"
+                                              className={"absolute  large -right-[360px]  top-[1900px] rotate-[1deg]"}/>
                         </div>
-                        <div className="float">
-                            <BlockWithStripes fill="red"
-                                              className={"fixed  medium -right-[360px]  top-[900px] -rotate-[8deg]"}/>
+                        <div className="animation-delay-800 float-fast">
+                            <BlockWithStripes fill="#FF0060"
+                                              className={"absolute  medium -right-[360px]  top-[900px] -rotate-[8deg]"}/>
                         </div>
-                        <div className="float">
-                            <BlockWithStripes fill="red"
-                                              className={"fixed  x-large -right-[60px]  top-[400px] rotate-[338deg]"}/>
+                        <div className="animation-delay-700 float">
+                            <BlockWithStripes fill="#F6FA70"
+                                              className={"absolute  x-large -right-[60px]  top-[400px] rotate-[338deg]"}/>
                         </div>
-                        <div className="float">
-                            <BlockWithStripes fill="red"
-                                              className={"fixed  x-large right-[60px]  top-[700px] -rotate-[251deg]"}/>
+                        <div className="animation-delay-600 float-extra-long">
+                            <BlockWithStripes fill="#0079FF"
+                                              className={"absolute  x-large right-[60px]  top-[700px] -rotate-[251deg]"}/>
                         </div>
-                        <div className="float">
-                            <BlockWithStripes fill="red"
-                                              className={"fixed  huge -right-[1620px]  top-[122px] rotate-[171deg]"}/>
+                        <div className="animation-delay-500 float-slow">
+                            <BlockWithStripes fill="#0079FF"
+                                              className={"absolute  huge -right-[1620px]  top-[122px] rotate-[171deg]"}/>
                         </div>
-                        <div className="float">
-                            <BlockWithStripes fill="red"
-                                              className={"fixed  x2-large -right-[960px]  -top-[180px] -rotate-[84deg]"}/>
+                        <div className="animation-delay-300 float-fast">
+                            <BlockWithStripes fill="#FF0060"
+                                              className={"absolute  medium -right-[1160px] -top-[400px] rotate-[90deg]"}/>
                         </div>
-                        <div className="float">
-                            <BlockWithStripes fill="red"
-                                              className={"fixed  medium -right-[1160px] -top-[400px] rotate-[90deg]"}/>
-                        </div>
-                        <div className="float">
-                            <BlockWithStripes fill="red"
-                                              className={"fixed  medium -right-[1567px] -top-[90px] -rotate-[51deg]"}/>
+                        <div className="animation-delay-200 float-fast">
+                            <BlockWithStripes fill="#F6FA70"
+                                              className={"absolute  medium -right-[1567px] -top-[90px] -rotate-[51deg]"}/>
                         </div>
 
                     </div>
 
-                </div>
             </div>
-            <div className="bg-transparent flex justify-center top-0 layer1 relative">
+
+            <div className="flex justify-center top-0 layer1 relative">
                 <div className="sm:w-[625px] min-w-[325px] sm:w-1/2 w-10/12  absolute top-5 rounded-lg">
 
                     <ProfileSection/>
@@ -447,19 +440,12 @@ export default function Layout1() {
 
                     {/*projects*/}
                     <div className="mt-24">
-                        <h1
-                            className="flex justify-center items-center flex-initial
-                                h-20 text-white bg-[#ff0000] mx-[-3%] gap-8
-                                my-[5%] text-with-red-shadow-no-gradient-very-long font-bold rounded
-                                text-7xl
-                                ">
-                            Projects
-                        </h1>
+                        <SectionHeading text="Projects"/>
 
                         <div className="flex flex-col">
 
                             {/*my site*/}
-                            <div className="mb-10 grid grid-cols-2 text-white bg-[#3B60E4] p-4">
+                            <div className="mb-10 grid grid-cols-2 text-white bg-[#0445b3] p-4">
                                 <div>
                                     <Image
                                         className="float-start"
@@ -483,7 +469,7 @@ export default function Layout1() {
                             </div>
 
                             {/*under construction*/}
-                            <div className="mb-10 grid grid-cols-2 text-white bg-[#3B60E4] p-4">
+                            <div className="mb-10 grid grid-cols-2 text-white bg-[#033eaf] p-4">
                                 <div>
                                     <Image
                                         className="float-start"
@@ -507,7 +493,7 @@ export default function Layout1() {
 
 
                             {/*price tracker*/}
-                            <div className="mb-10 grid grid-cols-2 text-white bg-[#3B60E4] p-4">
+                            <div className="mb-10 grid grid-cols-2 text-white bg-[#0137ac] p-4">
                                 <div>
                                     <Image
                                         className="float-start"
@@ -533,7 +519,7 @@ export default function Layout1() {
                             </div>
 
                             {/*lego 3d model*/}
-                            <div className="mb-10 grid grid-cols-2 text-white bg-[#3B60E4] p-4">
+                            <div className="mb-10 grid grid-cols-2 text-white bg-[#0030a8] p-4">
                                 <div>
                                     <Image
                                         className="float-start"
