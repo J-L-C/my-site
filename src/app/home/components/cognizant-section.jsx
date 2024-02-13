@@ -1,5 +1,5 @@
 "use client"
-import CognizantLogo from "@/app/demo/layout1/logos/cognizant-logo";
+import CognizantLogo from "@/app/home/logos/cognizant-logo";
 import {useEffect} from "react";
 
 export default function CognizantSection({className}) {

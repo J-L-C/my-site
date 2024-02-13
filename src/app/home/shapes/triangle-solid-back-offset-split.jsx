@@ -1,5 +1,5 @@
-import TriangleSolidBackOffsetFront from "@/app/demo/layout1/shapes/splits/triangle-solid-back-offset-front";
-import TriangleSolidBackOffsetBack from "@/app/demo/layout1/shapes/splits/triangle-solid-back-offset-back";
+import TriangleSolidBackOffsetFront from "@/app/home/shapes/splits/triangle-solid-back-offset-front";
+import TriangleSolidBackOffsetBack from "@/app/home/shapes/splits/triangle-solid-back-offset-back";
 
 export default function TriangleSolidBackOffsetSplit({className}) {
     //I want to spin each section independently to creat a cool effect.

@@ -1,5 +1,5 @@
 "use client"
-import SabreLogo from "@/app/demo/layout1/logos/sabre-logo";
+import SabreLogo from "@/app/home/logos/sabre-logo";
 import {useEffect} from "react";
 
 export default function SabreSection({className}) {

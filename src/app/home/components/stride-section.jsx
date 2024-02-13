@@ -1,5 +1,5 @@
 "use client"
-import StrideLogo from "@/app/demo/layout1/logos/stride-logo";
+import StrideLogo from "@/app/home/logos/stride-logo";
 import {useEffect} from "react";
 
 

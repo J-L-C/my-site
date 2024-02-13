@@ -1,5 +1,5 @@
 "use client"
-import AllstateLogo from "@/app/demo/layout1/logos/allstate-logo";
+import AllstateLogo from "@/app/home/logos/allstate-logo";
 import {useEffect} from "react";
 
 export default function AllstateSection({className}) {

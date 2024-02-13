@@ -1,4 +1,4 @@
-import SectionHeading from "@/app/demo/layout1/components/section-heading";
+import SectionHeading from "@/app/home/components/section-heading";
 
 export default function HeroSection({className}){
     return (<>

@@ -1,5 +1,5 @@
 "use client"
-import SantanderUsaLogo from "@/app/demo/layout1/logos/santander-usa-logo";
+import SantanderUsaLogo from "@/app/home/logos/santander-usa-logo";
 import {useEffect} from "react";
 
 export default function SantanderSection({className}) {

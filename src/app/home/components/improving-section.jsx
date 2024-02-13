@@ -1,5 +1,5 @@
 "use client"
-import ImprovingLogo from "@/app/demo/layout1/logos/improving-logo";
+import ImprovingLogo from "@/app/home/logos/improving-logo";
 import {useEffect} from "react";
 
 export default function ImprovingSection({className}) {

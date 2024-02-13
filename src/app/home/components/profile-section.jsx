@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
-import GithubLink from "@/app/demo/layout1/components/links/github-link";
-import LinkedinLink from "@/app/demo/layout1/components/links/linkedin-link";
+import GithubLink from "@/app/home/components/links/github-link";
+import LinkedinLink from "@/app/home/components/links/linkedin-link";
 
 export default function ProfileSection({className}) {
 

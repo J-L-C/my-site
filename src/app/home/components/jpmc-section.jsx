@@ -1,5 +1,5 @@
 "use client"
-import JpmcLogo from "@/app/demo/layout1/logos/jpmc-logo";
+import JpmcLogo from "@/app/home/logos/jpmc-logo";
 import {useEffect} from "react";
 
 export default function JpmcSection({className}) {

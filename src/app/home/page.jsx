@@ -1,17 +1,16 @@
 "use client"
 import Image from "next/image";
-import Link from "next/link";
-import HeroSection from "@/app/demo/layout1/components/hero-section";
-import ProfileSection from "@/app/demo/layout1/components/profile-section";
-import CareerJourney from "@/app/demo/layout1/components/career-journey";
+import HeroSection from "@/app/home/components/hero-section";
+import ProfileSection from "@/app/home/components/profile-section";
+import CareerJourney from "@/app/home/components/career-journey";
 import {useEffect} from "react";
-import {convertTimeToNumber} from "@/app/demo/layout1/utils/convert";
-import BlockWithStripes from "@/app/demo/layout1/shapes/block-with-stripes";
-import YoutubeLink from "@/app/demo/layout1/components/links/youtube-link";
-import GithubLink from "@/app/demo/layout1/components/links/github-link";
-import SectionHeading from "@/app/demo/layout1/components/section-heading";
+import {convertTimeToNumber} from "@/app/home/utils/convert";
+import BlockWithStripes from "@/app/home/shapes/block-with-stripes";
+import YoutubeLink from "@/app/home/components/links/youtube-link";
+import GithubLink from "@/app/home/components/links/github-link";
+import SectionHeading from "@/app/home/components/section-heading";
 
-export default function Layout1() {
+export default function AboutMe() {
 
     let strideLogo;
     let improvingLogo;

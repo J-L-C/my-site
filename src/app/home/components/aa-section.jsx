@@ -1,5 +1,5 @@
 "use client"
-import AALogo from "@/app/demo/layout1/logos/aa-logo";
+import AALogo from "@/app/home/logos/aa-logo";
 import {useEffect} from "react";
 
 export default function AaSection({className}) {
