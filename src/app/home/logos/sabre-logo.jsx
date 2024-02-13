@@ -1,4 +1,4 @@
-export default function SabreLogo({id = "sabreLogo",width, height, className, onClick}) {
+export default function SabreLogo({id = "sabreLogo",width = 300, height =300, className, onClick}) {
 
     return (
         <>

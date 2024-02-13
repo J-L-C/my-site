@@ -13,9 +13,16 @@ body {
     }
 }
 
-html {background-color: #ccdbe3
+html {
+    background-color: #e2e3de
 }
 
+svg{
+    overflow-y: auto;
+    overflow-x: auto;
+    max-height: 100rem;
+    max-width: 100rem;
+}
 @layer base {
     h1 {
         @apply text-3xl;

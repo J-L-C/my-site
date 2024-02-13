@@ -1,4 +1,4 @@
-export default function AALogo({id = "aaLogo",width, height, className, onClick}){
+export default function AALogo({id = "aaLogo",width = 300, height = 300, className, onClick}){
 
     return(
         <>

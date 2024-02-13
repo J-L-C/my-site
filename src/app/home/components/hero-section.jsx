@@ -3,9 +3,8 @@ import SectionHeading from "@/app/home/components/section-heading";
 export default function HeroSection({className}){
     return (<>
         <div className="flex flex-col justify-center mt-8 mb-16">
-            <div>
+            <div className="mb-8">
                 <SectionHeading text="About Me"/>
-
             </div>
 
             <div className="justify-center items-center">

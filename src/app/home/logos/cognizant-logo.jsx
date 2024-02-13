@@ -1,4 +1,4 @@
-export default function CognizantLogo({id = "cognizantLogo",width, height, className, onClick}) {
+export default function CognizantLogo({id = "cognizantLogo",width = 300, height = 300, className, onClick}) {
 
     const defaultStyle = `
         .st2{fill:#000048}
@@ -12,7 +12,6 @@ export default function CognizantLogo({id = "cognizantLogo",width, height, class
                  height={height}
                  onClick={onClick}
                  className={className}
-
                  transform="scale(1.25) translate(30,30)"
                  xmlns="http://www.w3.org/2000/svg"
             >

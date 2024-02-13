@@ -1,4 +1,4 @@
-export default function AllstateLogo({id = "allstateLogo",width, height, className, onClick}) {
+export default function AllstateLogo({id = "allstateLogo",width = 300, height = 300, className, onClick}) {
 
     return (
         <>
@@ -8,7 +8,6 @@ export default function AllstateLogo({id = "allstateLogo",width, height, classNa
                  height={height}
                  className={className}
                  onClick={onClick}
-                 opacity="0"
                  transform="translate(-40, -10)"
                  viewBox="0 0 494 117">
                 <path fill="url(#appear-text)"

@@ -1,4 +1,4 @@
-export default function ImprovingLogo({id = "improvingLogo",width = 200, height = 200, className, click}) {
+export default function ImprovingLogo({id = "improvingLogo",width = 300, height = 300, className, click}) {
 
     return (
         <>
@@ -7,7 +7,6 @@ export default function ImprovingLogo({id = "improvingLogo",width = 200, height 
                  height={height}
                  className={className}
                  onClick={click}
-                 opacity="0"
                  viewBox="-17 0 545.3 164.1"
                  xmlns="http://www.w3.org/2000/svg"
                  transform="scale(1.10,1.10)"

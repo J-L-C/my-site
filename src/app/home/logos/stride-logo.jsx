@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function StrideLogo({ id = "strideLogo",width = 200, height = 200, className, click}){
+export default function StrideLogo({ id = "strideLogo",width = 300, height = 300, className, click}){
     return (
         <>
             <svg

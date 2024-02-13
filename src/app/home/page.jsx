@@ -54,25 +54,9 @@ export default function AboutMe() {
 
     }
 
-    const removeScrollEvent = () => {
-        if (strideLogoTriggered,
-            improvingLogoTriggered,
-            jpmcLogoTriggered,
-            aaLogoTriggered,
-            cognizantLogoTriggered,
-            allstateLogoTriggered,
-            sabreLogoTriggered,
-            santanderLogoTriggered) {
-
-            console.log('scroll event removed')
-            window.removeEventListener("scroll", triggerAnimationInView)
-        }
-    }
-
     const triggerAnimationInView = () => {
         if (isInViewport(strideLogo) && !strideLogoTriggered) {
             // triggerAnimation(strideLogo)
-            console.log('stride triggered')
             strideLogoTriggered = true;
         }
         if (isInViewport(improvingLogo) && !improvingLogoTriggered) {
@@ -90,7 +74,6 @@ export default function AboutMe() {
             aaLogoTriggered = true;
         }
         if (isInViewport(cognizantLogo) && !cognizantLogoTriggered) {
-            console.log('cognizant triggered')
             triggerAnimation(cognizantLogo)
             cognizantLogo.setAttribute("opacity", 1)
             cognizantLogoTriggered = true;
@@ -110,7 +93,6 @@ export default function AboutMe() {
             santanderLogoTriggered = true;
         }
 
-        removeScrollEvent()
     }
 
     useEffect(() => {
@@ -144,7 +126,7 @@ export default function AboutMe() {
     return (
         <div className="parallax__viewport">
             <div className={"relative layer3"}>
-                <div className={"rotate-180 bottom-0 sm:inline-block hidden"}>
+                <div className={"rotate-180 bottom-0"}>
 
                     <div className="">
 
@@ -447,7 +429,7 @@ export default function AboutMe() {
                             <div className="mb-10 grid sm:grid-cols-2 text-white bg-[#0030a8] sm:p-4 p-8 text-justify">
                                 <div>
                                     <Image
-                                        className="float-start "
+                                        className="float-start"
                                         width="250" height="250" src="/my-site.png"
                                         alt="Picture of this site"/>
                                 </div>
