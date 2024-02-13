@@ -457,7 +457,7 @@ export default function AboutMe() {
                                         My Site
                                     </h1>
                                     <div className="mt-4 font-light">
-                                        <div>This is my personal site to show off what I've been up
+                                        <div>This is my personal site to show off what I&apos;ve been up
                                             to! Click the github icon to see the source code for this project.
                                         </div>
                                     </div>

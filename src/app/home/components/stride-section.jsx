@@ -39,9 +39,9 @@ export default function StrideSection({className}) {
             <div className="text-white p-8 text-justify bg-[#107bd0]">
                 <div className="text-center -mt-4 mb-4 text-gray-300 text-sm">[ 03/2023 - 01/2024 ]</div>
                 <p>
-                    Stride is an experience I won't forget! It had the culture and people that I really
+                    Stride is an experience I won&apos;t forget! It had the culture and people that I really
                     look for in a company, a company driven by XP principles and a feedback rich culture.
-                    At My first client, me and an other engineer, dove deep into our client's systems learning everything we could.
+                    At My first client, me and an other engineer, dove deep into our client&apos;s systems learning everything we could.
                     We wanted to make sure the work we did would equip our client with the tools and insight needed to migrate to a new system.
                     To that end we delivered well documented insights, migration scripts, and a flexible, extensible test
                     harness to measure DBMS performance across multiple DBMS solutions including their current solution.

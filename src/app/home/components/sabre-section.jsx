@@ -41,7 +41,7 @@ export default function SabreSection({className}) {
                     It was here that I began to build my technical skills. Though I enjoyed the work of a Business
                     Analyst
                     I really had my heart set on being more technical and writing applications instead. At Sabre,
-                    I was challenged with building test automation for the Sabre system and for Sabre's web services.
+                    I was challenged with building test automation for the Sabre system and for Sabre&apos;s web services.
                     The most exciting project I worked on was the AA/US Airways data migrations. Using Jmeter and Java,
                     I was able to validate large volumes of data, accessed through the Sabre system. Developers and
                     other
